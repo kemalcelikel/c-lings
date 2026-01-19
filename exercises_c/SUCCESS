@@ -1,0 +1,8 @@
+The Clings course is ready!
+98 exercises generated.
+Check script is configured.
+README is updated.
+
+Run:
+  cd exercises_c
+  ./check.py
