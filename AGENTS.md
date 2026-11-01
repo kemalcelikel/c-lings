@@ -82,6 +82,11 @@ fails explicitly. There is no watch mode.
   File-reading lessons also need their referenced sources in the answers folder.
 - Verify changes with the commands below. Generated executables, data, and
   solved working copies must stay out of learner sources and commits.
+- Commit each lesson fix or addition separately after verification, including
+  its patch and only directly required registry/documentation/test updates.
+  Shared checker changes belong in separate commits. Never stage unrelated
+  learner answers. If learner files are locally solved, verify maintenance
+  changes in a clean committed/staged snapshot without resetting those edits.
 
 ```sh
 make test

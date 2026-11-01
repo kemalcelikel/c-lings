@@ -46,6 +46,14 @@ the existing patch. Use `CC=gcc-12 sh tools/make_patch.sh PATH` to select a comp
 Only broken learner sources and their patches belong in commits, not solved
 working copies or generated files. The conclusion needs no patch.
 
+Commit each lesson fix or addition separately after verification. Include its
+patch and directly required registry/inventory/count/test updates; keep unrelated
+lesson edits and shared checker changes in separate commits. Preserve local
+learner answers. When those answers are already solved, run maintenance checks
+against a clean committed/staged snapshot containing the intended change rather
+than resetting learner files. See [COURSE_AUDIT.md](COURSE_AUDIT.md) for the
+coverage review and prioritized lesson work.
+
 ## Runner and tooling changes
 
 ```sh
