@@ -1,6 +1,7 @@
 //
 // Sometimes we need the index of the item we are processing.
-// In C, since we always loop with an index, this is natural!
+// An index-based loop makes that position available alongside the value.
+// C can also traverse arrays using pointers, which we will study later.
 //
 
 #include <stdio.h>
@@ -15,10 +16,9 @@ int main(void) {
     for (int i = 0; i < len; i++) {
         int bit = bits[i];
         
-        // Calculate 2 to the power of i.
-        // We can use the shift operator (1 << i) for powers of 2,
-        // which is more idiomatic in C than pow().
-        // Replace the placeholder with the current bit position.
+        // A left shift by k positions multiplies 1 by 2 to the power k.
+        // Choose the exponent belonging to this bit's place in the array.
+        // These small shift counts stay within the range of int.
         int place_value = (1 << ???); 
         
         value += place_value * bit;

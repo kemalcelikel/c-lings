@@ -1,16 +1,16 @@
 --- 079_function_pointers.c
 +++ 079_function_pointers.c
-@@ -15,13 +15,13 @@
+@@ -14,13 +14,13 @@
+ int main(void) {
      // (Problem 1)
-     // Define a function pointer named 'op' that takes two ints and returns an int.
-     // Initialize it to point to 'add'.
+     // The pointer's type is supplied. Select the operation for the first call.
 -    int (*op)(int, int) = ???;
 +    int (*op)(int, int) = add;
  
      printf("Add: %d\n", op(10, 5));
  
      // (Problem 2)
-     // Point it to 'sub'.
+     // Select the operation for the second call without changing the call itself.
 -    op = ???;
 +    op = sub;
      

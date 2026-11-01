@@ -1,11 +1,13 @@
 --- 068_inline.c
 +++ 068_inline.c
-@@ -10,7 +10,7 @@
+@@ -10,8 +10,8 @@
  
- // (Problem 1)
- // Add the inline keyword to this internal-linkage function.
+ // Complete this small internal-linkage helper with the function specifier
+ // discussed above, and implement its computation. Inlining is still optional.
 -static ??? int square(int x) {
+-    return ???;
 +static inline int square(int x) {
-     return x * x;
++    return x * x;
  }
  
+ int main(void) {

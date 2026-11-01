@@ -36,7 +36,7 @@ Error perform_task(void) {
 
     err = step2();
     // (Problem 1)
-    // If step2 failed, we should return the error immediately!
+    // Prevent later steps from hiding this failure from the caller.
     if (err != SUCCESS) ???;
 
     err = step3();

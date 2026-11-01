@@ -27,15 +27,11 @@ typedef enum {
 } Role;
 
 // (Problem 1)
-// Define the Character struct.
-// It needs:
-// - role (type Role)
-// - gold (type int)
-// - health (type int)
+// Complete the Character definition to support its initialization and use.
 struct Character {
     Role role;
     int gold;
-    ???; // Add health
+    ???;
 };
 
 int main(void) {

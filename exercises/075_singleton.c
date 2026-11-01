@@ -1,5 +1,5 @@
 //
-// The Singleton pattern ensures only one instance of a struct exists.
+// The Singleton pattern provides one shared instance through an interface.
 // In C, we often use a static variable inside a function to hold the instance.
 // This example exposes one shared instance; callers must coordinate access
 // if they use it from multiple threads.
@@ -15,8 +15,8 @@ typedef struct {
 // Get the global singleton instance
 Config* get_config(void) {
     // (Problem 1)
-    // Define a static variable 'instance'.
-    // It will be initialized only once!
+    // The returned object's lifetime must extend beyond this call.
+    // Keep one function-local instance shared by subsequent callers.
     ??? Config instance = { .id = 1, .data = 0 };
     return &instance;
 }

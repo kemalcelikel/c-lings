@@ -2,10 +2,10 @@
 // In C, you can allocate memory on the "heap" using malloc().
 // This memory persists until you explicitly free it!
 //
-//     int *p = malloc(sizeof(int));
-//     if (p == NULL) return 1; // Allocation can fail.
-//     *p = 10;
-//     free(p);
+//     int *score = malloc(sizeof(int));
+//     if (score == NULL) return 1; // Allocation can fail.
+//     *score = 10;
+//     free(score);
 //
 // If you forget to free, it's a "memory leak".
 //
@@ -26,7 +26,7 @@ int main(void) {
     printf("Value: %d\n", *p);
 
     // (Problem 1)
-    // We are done with the memory. Free it!
+    // Release the allocation now that it is no longer needed.
     free(???);
 
     return 0;

@@ -26,12 +26,11 @@ void print_slice(CharSlice slice) {
 int main(void) {
     char cards[] = { 'A', '4', 'K', '8', '5', '2', 'Q', 'J' };
 
-    // (Problem 1)
-    // Create a slice for the first 4 cards.
+    // A supplied view of the first half of the array.
     CharSlice hand1 = { .ptr = &cards[0], .len = 4 };
 
-    // (Problem 2)
-    // Create a slice for the rest of the cards (starting at index 4).
+    // Create a view of the remaining cards without copying their storage.
+    // Derive the starting address and count from the original array.
     CharSlice hand2 = { .ptr = ???, .len = ??? };
 
     printf("Hand 1: ");

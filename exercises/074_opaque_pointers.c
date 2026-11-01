@@ -2,6 +2,9 @@
 // In C, we can hide implementation details using "Opaque Pointers".
 // The header file declares `typedef struct Shape Shape;` without defining the struct.
 // The user only sees `Shape*` and calls functions like `shape_area(Shape*)`.
+// This single-file demonstration shows both sides together. The boundary
+// is illustrative: real hiding requires the definition to be in a separate
+// translation unit, unavailable to the caller.
 //
 
 #include <stdio.h>
@@ -30,7 +33,7 @@ Shape* shape_create_square(int side) {
 
 int shape_area(Shape* s) {
     // (Problem 1)
-    // Access the hidden data.
+    // Compute the square's area from the implementation's stored dimension.
     return s->dim * ???;
 }
 

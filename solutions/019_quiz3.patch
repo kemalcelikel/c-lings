@@ -1,18 +1,22 @@
 --- 019_quiz3.c
 +++ 019_quiz3.c
-@@ -27,7 +27,7 @@
+@@ -28,7 +28,7 @@
  
  // (Problem 1)
- // Fix the return type. This function prints but returns nothing.
--int printPowersOfTwo(int *numbers, int size) {
+ // Complete this definition to agree with its earlier declaration.
+-??? printPowersOfTwo(int *numbers, int size) {
 +void printPowersOfTwo(int *numbers, int size) {
      for (int i = 0; i < size; i++) {
          int n = numbers[i];
          printf("%d ", twoToThe(n));
-@@ -46,5 +46,5 @@
-     }
- 
-     // What should we return?
--    return ???;
+@@ -39,5 +39,9 @@
+ // Compute an integer power of two using a loop, then return the result.
+ // The caller supplies small nonnegative exponents; do not use shifts here.
+ int twoToThe(int number) {
+-    ???;
++    int total = 1;
++    for (int n = 0; n < number; n++) {
++        total *= 2;
++    }
 +    return total;
  }

@@ -1,9 +1,9 @@
 --- 046_sentinels.c
 +++ 046_sentinels.c
-@@ -11,13 +11,13 @@
- int main(void) {
+@@ -12,13 +12,13 @@
      // (Problem 1)
-     // Create an array of integers that ends with -1 as a sentinel.
+     // Use a negative sentinel that cannot be confused with these positive data.
+     // Keep the array and traversal in agreement.
 -    int nums[] = { 10, 20, 30, 40, ??? };
 +    int nums[] = { 10, 20, 30, 40, -1 };
  
@@ -16,7 +16,7 @@
          printf("%d ", nums[i]);
          i++;
      }
-@@ -27,7 +27,7 @@
+@@ -28,7 +28,7 @@
      // String length calculation.
      const char *str = "Hello";
      int len = 0;

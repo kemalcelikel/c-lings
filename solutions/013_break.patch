@@ -2,7 +2,7 @@
 +++ 013_break.c
 @@ -9,7 +9,7 @@
  
-     // This loop would go forever if we don't break it!
+     // End the loop at the value in the output check.
      while (1) {
 -        if (n == 4) ???;
 +        if (n == 4) break;

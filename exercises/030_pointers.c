@@ -17,8 +17,7 @@ int main(void) {
     int num2 = 0;
 
     // (Problem 1)
-    // Make num2 equal to the value num1_pointer points to.
-    // Use the dereference operator *.
+    // Obtain num2 through num1_pointer, rather than naming num1 directly.
     num2 = ???;
 
     printf("num1: %d, num2: %d\n", num1, num2);

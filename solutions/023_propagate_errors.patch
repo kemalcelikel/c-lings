@@ -3,7 +3,7 @@
 @@ -37,7 +37,7 @@
      err = step2();
      // (Problem 1)
-     // If step2 failed, we should return the error immediately!
+     // Prevent later steps from hiding this failure from the caller.
 -    if (err != SUCCESS) ???;
 +    if (err != SUCCESS) return err;
  

@@ -1,6 +1,9 @@
 //
 // C provides 'strtok' in <string.h> for tokenizing strings.
 // Warning: strtok modifies the original string and is not thread-safe!
+// The first call supplies the string to split. Later calls pass NULL in
+// its place to continue that same traversal. The delimiter string lists
+// individual separator characters, not a multi-character separator.
 //
 
 #include <stdio.h>
@@ -10,11 +13,10 @@ int main(void) {
     char poem[] = "My name is Ozymandias, King of Kings;\n" 
                   "Look on my Works, ye Mighty, and despair!";
 
-    // (Problem 1)
-    // Specify the delimiters: space, comma, semicolon, newline.
+    // The separators for this poem are supplied.
     const char *delims = " ,;\n";
     
-    // Get the first token
+    // (Problem 1) Start tokenizing the poem with the chosen separators.
     char *token = strtok(poem, ???);
 
     int count = 0;
@@ -23,7 +25,7 @@ int main(void) {
         printf("%s\n", token);
         
         // (Problem 2)
-        // To get the next token, call strtok with NULL as the first argument.
+        // Continue this traversal rather than restarting at the first word.
         token = strtok(???, delims);
     }
 

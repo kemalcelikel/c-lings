@@ -1,9 +1,9 @@
 --- 026_switch_break.c
 +++ 026_switch_break.c
-@@ -21,7 +21,7 @@
+@@ -22,7 +22,7 @@
              printf("1");
              // (Problem 1)
-             // Add the missing keyword to stop it from printing "2" as well.
+             // Finish this case without executing the next case's statements.
 -            ???;
 +            break;
          case 2:

@@ -3,6 +3,8 @@
 // of an event (e.g., user pressed Ctrl+C).
 //
 // We use <signal.h> to handle them.
+// signal(signal_number, function) installs a handler and returns SIG_ERR
+// if registration fails. raise(signal_number) sends a signal to this program.
 //
 
 #include <stdio.h>
@@ -20,8 +22,7 @@ void handle_interrupt(int sig) {
 
 int main(void) {
     // (Problem 1)
-    // Register the handler for SIGINT (Ctrl+C).
-    // signal(SIGNAL_TYPE, handler_function)
+    // Select the handler that records the interrupt for main to observe.
     if (signal(SIGINT, ???) == SIG_ERR) return 1;
 
     printf("Running... (Wait, we will simulate a signal in this exercise)\n");

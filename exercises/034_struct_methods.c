@@ -17,8 +17,8 @@ typedef struct {
 } Alien;
 
 // (Problem 1)
-// Define the zap function.
-// It should take a pointer to HeatRay and a pointer to Alien.
+// Complete the parameters to support the body below. The caller's alien
+// must reflect changes made here, rather than modifying a local copy.
 void zap(???, ???) {
     int dmg = ray->damage;
     if (alien->health < dmg) {
@@ -35,7 +35,7 @@ int main(void) {
     // Zap it 3 times!
     for (int i = 0; i < 3; i++) {
         // (Problem 2)
-        // Pass the addresses of our objects!
+        // Supply the weapon and monster in the form zap expects.
         zap(???, ???);
         printf("Alien health: %d\n", monster.health);
     }

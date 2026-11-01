@@ -3,7 +3,9 @@
 Learn C by fixing small, intentionally broken programs.
 
 Clings contains **96 exercises and a conclusion**. Read each lesson's comments,
-fix its mistakes, and let the compiler and checker guide you. The course covers
+work out its mistakes, and let the compiler and checker guide you. Comments teach
+the concepts; the task-specific edits are yours to discover. Quizzes combine
+earlier concepts with less guidance. The course covers
 the basics, pointers, allocation, the standard library, and selected systems
 topics. The runner itself is written in C and built with GCC and GNU Make.
 
@@ -47,7 +49,8 @@ make
 The checker will stop and tell you which file to fix.
 
 For your first lesson, open **`exercises/001_hello.c`** in a text editor. Read
-the comments at the top: they explain what is missing and how to fix it.
+the comments at the top: they introduce the concepts you need. Use the compiler
+diagnostic to identify the problem, then decide how to repair it.
 
 ### 4. Fix, save, and run again
 

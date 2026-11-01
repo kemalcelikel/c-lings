@@ -24,7 +24,7 @@ int main(void) {
 
     if (error) {
         // (Problem 1)
-        // Jump to the cleanup section!
+        // On failure, skip the work but still execute the resource cleanup.
         goto ???;
     }
 

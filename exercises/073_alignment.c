@@ -21,7 +21,8 @@ struct Normal {
 };
 
 // (Problem 1)
-// Add the attribute to pack this struct.
+// Request the packed layout for this definition, keeping the ordinary
+// definition above unchanged. Consider why this is an explicit choice.
 struct ??? Packed {
     char c;
     int i;

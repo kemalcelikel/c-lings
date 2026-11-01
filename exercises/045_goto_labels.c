@@ -24,7 +24,7 @@ int main(void) {
 
     // (Problem 1)
     // We want to find the target and stop immediately.
-    // Use a goto to break out of both loops.
+    // The transfer must leave both loops and continue with the report.
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             if (matrix[i][j] == target) {
@@ -34,7 +34,7 @@ int main(void) {
         }
     }
 
-// Define the label here, before reporting whether the target was found.
+// Both successful search and normal loop completion reach this report.
 end:
     if (found) {
         printf("Found %d!\n", target);

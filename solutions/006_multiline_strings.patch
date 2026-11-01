@@ -1,8 +1,8 @@
 --- 006_multiline_strings.c
 +++ 006_multiline_strings.c
 @@ -15,7 +15,7 @@
-     // Join these three lines using adjacent string literals.
-     // Replace the placeholder with "One line at a time.\n".
+     // Complete the text so all three output lines match the checks below.
+     // Pay attention to where each output line ends.
      const char *text = "Learning C\n"
 -                       ???
 +                       "One line at a time.\n"

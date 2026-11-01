@@ -1,20 +1,11 @@
 --- 027_unreachable.c
 +++ 027_unreachable.c
-@@ -10,7 +10,7 @@
+@@ -14,7 +14,7 @@
  
- int main(void) {
-     // Choose mode 1 so the valid path runs. Also complete the assertion below.
--    int mode = ???;
-+    int mode = 1;
+     // The switch supports two modes. Repair this assumption so either
+     // supported mode is accepted and unsupported modes are rejected.
+-    assert(mode == 2);
++    assert(mode == 1 || mode == 2);
  
      switch (mode) {
          case 1:
-@@ -23,7 +23,7 @@
-             // This mode should never happen!
-             // (Problem 1)
-             // Crash the program with an assertion failure.
--            assert(???);
-+            assert(0);
-             break;
-     }
-     return 0;

@@ -1,9 +1,9 @@
 --- 005_multidimensional_arrays.c
 +++ 005_multidimensional_arrays.c
-@@ -21,7 +21,7 @@
+@@ -20,7 +20,7 @@
+ 
      // (Problem 1)
-     // We want to print the number 4 (row index 1, column index 1).
-     // Please fix the indices.
+     // Select the matrix element containing the value in the expected output.
 -    int x = matrix[0][0]; 
 +    int x = matrix[1][1]; 
  

@@ -3,10 +3,8 @@
 // object. Each retained reference must eventually be released.
 // This example is single-threaded and does not handle ownership cycles.
 //
-//     Object created -> ref_count = 1
-//     retain()       -> ref_count++
-//     release()      -> ref_count--
-//     if ref_count == 0 -> free()
+// Creation establishes the first owner. Sharing adds an owner; releasing
+// removes one. Destroy the allocation only after its last owner leaves.
 //
 
 #include <stdio.h>
@@ -28,18 +26,18 @@ SharedInt* create_int(int value) {
 
 void retain(SharedInt *obj) {
     // (Problem 1)
-    // Increment the reference count.
-    obj->ref_count++;
+    // Record an additional owner without allocating a separate object.
+    ???;
     printf("Retained %d (refs: %d)\n", obj->value, obj->ref_count);
 }
 
 void release(SharedInt *obj) {
     // (Problem 2)
-    // Decrement ref_count. If it hits 0, free the object!
-    obj->ref_count--;
+    // Record a departing owner and release storage only when none remain.
+    ???;
     printf("Released %d (refs: %d)\n", obj->value, obj->ref_count);
 
-    if (obj->ref_count == 0) {
+    if (???) {
         printf("Freeing %d!\n", obj->value);
         free(???);
     }

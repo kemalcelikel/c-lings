@@ -21,7 +21,7 @@ int logged_operation(Operation op, const char* name, int a, int b) {
     printf("--- Calling %s(%d, %d) ---\n", name, a, b);
     
     // (Problem 1)
-    // Call the passed function.
+    // Obtain the result from the caller's operation while retaining the logging.
     int result = ???;
     
     printf("--- Result: %d ---\n", result);
@@ -30,7 +30,7 @@ int logged_operation(Operation op, const char* name, int a, int b) {
 
 int main(void) {
     // (Problem 2)
-    // Wrap the 'add' function.
+    // Select the operation matching the ADD label.
     logged_operation(???, "ADD", 10, 20);
 
     // Wrap the 'mul' function.

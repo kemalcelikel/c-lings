@@ -6,7 +6,7 @@
 //         float f;
 //     };
 //
-// Since the program doesn't know which field is active,
+// Since a union does not record which member was last stored,
 // we often use a "Tagged Union" - a struct containing an enum and a union.
 //
 //     struct Value {
@@ -34,7 +34,7 @@ typedef struct {
 
 void print_number(Number n) {
     // (Problem 1)
-    // Check the type and print the correct field.
+    // Use the tag to choose the member that was stored in each Number.
     if (n.type == TYPE_INT) {
         printf("Int: %d\n", ???);
     } else if (n.type == TYPE_FLOAT) {

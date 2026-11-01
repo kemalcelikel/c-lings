@@ -34,20 +34,19 @@ int put(const char *key, int value) {
     if (strlen(key) >= sizeof(hash_table[0].key) || value < 0) return 0;
     unsigned int idx = hash(key);
     // (Problem 1)
-    // Copy the key into the table at index 'idx'.
-    // strcpy(dest, src)
+    // Store this key/value pair and record that the selected slot is in use.
     strcpy(???, key);
-    hash_table[idx].value = value;
-    hash_table[idx].occupied = 1;
+    hash_table[idx].value = ???;
+    hash_table[idx].occupied = ???;
     return 1;
 }
 
 int get(const char *key) {
     unsigned int idx = hash(key);
     // (Problem 2)
-    // Check if the key at 'idx' matches the requested key.
-    // strcmp returns 0 if strings are equal.
-    if (hash_table[idx].occupied && strcmp(hash_table[idx].key, key) == ???) {
+    // Return a value only if this slot is in use and belongs to this key.
+    // An unused zero-initialized slot is not a stored empty key.
+    if (???) {
         return hash_table[idx].value;
     }
     return -1; // Not found
@@ -60,6 +59,7 @@ int main(void) {
 
     // apple reuses the empty key's slot: this limited table overwrites collisions.
     if (!put("apple", 100) || !put("banana", 200)) return 1;
+    printf("Overwritten empty key: %d\n", get(""));
 
     printf("apple: %d\n", get("apple"));
     printf("banana: %d\n", get("banana"));
@@ -73,6 +73,7 @@ int main(void) {
 
 // CHECK-EXACT: Missing empty key: -1
 // CHECK-EXACT: Stored empty key: 0
+// CHECK-EXACT: Overwritten empty key: -1
 // CHECK-EXACT: apple: 100
 // CHECK-EXACT: banana: 200
 // CHECK-EXACT: Missing key: -1

@@ -1,9 +1,9 @@
 --- 064_slices.c
 +++ 064_slices.c
-@@ -32,7 +32,7 @@
+@@ -31,7 +31,7 @@
  
-     // (Problem 2)
-     // Create a slice for the rest of the cards (starting at index 4).
+     // Create a view of the remaining cards without copying their storage.
+     // Derive the starting address and count from the original array.
 -    CharSlice hand2 = { .ptr = ???, .len = ??? };
 +    CharSlice hand2 = { .ptr = &cards[4], .len = 4 };
  

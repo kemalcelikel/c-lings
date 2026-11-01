@@ -9,11 +9,11 @@
 #include <stdio.h>
 
 // (Problem 1)
-// Create a type alias 'Byte' for 'unsigned char'.
+// Create a Byte alias for an unsigned single-byte integer type.
 typedef ??? Byte;
 
 // (Problem 2)
-// Define a struct Point and alias it in one go.
+// Complete the alias for the struct used by main.
 typedef struct {
     int x, y;
 } ???;

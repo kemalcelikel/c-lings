@@ -8,16 +8,21 @@
 
 #include <stdio.h>
 
-// (Problem 1)
-// Add the inline keyword to this internal-linkage function.
+// Complete this small internal-linkage helper with the function specifier
+// discussed above, and implement its computation. Inlining is still optional.
 static ??? int square(int x) {
-    return x * x;
+    return ???;
 }
 
 int main(void) {
-    int n = 5;
-    printf("Square of %d is %d\n", n, square(n));
+    int numbers[] = { -3, 0, 5 };
+    for (int i = 0; i < 3; i++) {
+        int n = numbers[i];
+        printf("Square of %d is %d\n", n, square(n));
+    }
     return 0;
 }
 
-// CHECK: Square of 5 is 25
+// CHECK-EXACT: Square of -3 is 9
+// CHECK-EXACT: Square of 0 is 0
+// CHECK-EXACT: Square of 5 is 25

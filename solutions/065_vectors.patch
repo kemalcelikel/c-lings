@@ -1,6 +1,6 @@
 --- 065_vectors.c
 +++ 065_vectors.c
-@@ -13,7 +13,7 @@
+@@ -14,7 +14,7 @@
  
  // (Problem 1)
  // Define a vector type for 4 floats.
@@ -9,7 +9,7 @@
  
  int main(void) {
      // Initialize vectors
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@
      // (Problem 2)
      // Add the two vectors element by element. SIMD instructions may be used;
      // the compiler and target determine the generated machine instructions.

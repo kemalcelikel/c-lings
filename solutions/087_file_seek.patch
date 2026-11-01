@@ -3,7 +3,7 @@
 @@ -20,7 +20,7 @@
  
      // (Problem 1)
-     // Jump to the 5th byte (index 4) from the beginning.
+     // Select the origin that makes this offset relative to the file's start.
 -    if (fseek(f, 4, ???) != 0) {
 +    if (fseek(f, 4, SEEK_SET) != 0) {
          fclose(f);

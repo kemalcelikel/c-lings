@@ -2,7 +2,7 @@
 // calloc() is like malloc(), but it initializes the memory to zero.
 // It also takes two arguments: number of items, and size of each item.
 //
-//     int *arr = calloc(5, sizeof(int));
+//     int *arr = calloc(3, sizeof(int));
 //     // arr[0] is 0, arr[1] is 0, etc.
 //
 
@@ -10,8 +10,9 @@
 #include <stdlib.h>
 
 int main(void) {
-    // Allocate an array of 5 integers, initialized to 0.
-    int *nums = calloc(5, sizeof(int));
+    // Obtain storage for five integers that initially contain zero.
+    // Do not add a separate initialization loop.
+    int *nums = ???;
     
     if (nums == NULL) return 1;
 
@@ -26,7 +27,7 @@ int main(void) {
     printf("All zero!\n");
 
     // (Problem 1)
-    // Don't forget to free!
+    // Release the allocation after its last use.
     free(???);
 
     return 0;

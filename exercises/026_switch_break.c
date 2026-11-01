@@ -1,5 +1,6 @@
 //
-// CRITICAL: In C, switch cases "fall through" if you don't use 'break'!
+// After entering a switch case, execution continues through later labels
+// unless control leaves that path, for example with break or return.
 //
 //     switch (1) {
 //         case 1: printf("One"); // No break!
@@ -15,12 +16,12 @@ int main(void) {
 
     printf("Count: ");
 
-    // We want to print "1" if n is 1, but we forgot the break!
+    // Exactly one case's message should be printed for this value.
     switch (n) {
         case 1:
             printf("1");
             // (Problem 1)
-            // Add the missing keyword to stop it from printing "2" as well.
+            // Finish this case without executing the next case's statements.
             ???;
         case 2:
             printf("2");

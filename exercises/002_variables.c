@@ -7,7 +7,8 @@
 //     const int b = 30;
 //     b = 40; // Error!
 //
-// Please keep 'pi' constant and remove the assignment that changes it.
+// Make the program compile while keeping pi constant and preserving its
+// initial value. Which statement conflicts with that requirement?
 //
 
 #include <stdio.h>
@@ -18,7 +19,7 @@ int main(void) {
 
     const int pi = 314159;
     
-    // Oh no! We are trying to change a constant!
+    // Does this operation agree with the declaration above?
     pi = 3;
 
     printf("x: %d, pi: %d\n", x, pi);

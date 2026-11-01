@@ -12,11 +12,11 @@
 void print_value(void *ptr, char type) {
     if (type == 'i') {
         // (Problem 1)
-        // Cast ptr to int* and dereference it.
+        // Read the object using the type selected by this branch.
         printf("Int: %d\n", ???);
     } else if (type == 'f') {
         // (Problem 2)
-        // Cast ptr to float* and dereference it.
+        // Read this different object type without changing its representation.
         printf("Float: %.1f\n", ???);
     }
 }

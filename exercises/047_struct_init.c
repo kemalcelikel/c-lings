@@ -8,8 +8,7 @@
 struct Sprite {
     const char *name;
     // (Problem 1)
-    // Complete the union keyword inside 'pos'.
-    // It should have 'int xy[2]' and 'struct { int x, y; }'.
+    // These two representations should share storage rather than sit side by side.
     // Choose one union representation when writing and reading it.
     // Here we use x and y; the array alternative is not active.
     struct {
@@ -25,7 +24,7 @@ struct Sprite {
 
 int main(void) {
     // (Problem 2)
-    // Initialize the sprite using designated initializers.
+    // Complete the initial position to agree with the expected output.
     struct Sprite hero = {
         .name = "Cleo",
         .pos = {

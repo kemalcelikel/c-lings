@@ -33,7 +33,7 @@ int main(void) {
     for (int i = 0; i < 2; i++) {
         printf("Using %s: ", toolbox[i]->name);
         // (Problem 1)
-        // Call the 'use' function through the pointer.
+        // Invoke the current tool's action without selecting by its name.
         ???;
     }
 

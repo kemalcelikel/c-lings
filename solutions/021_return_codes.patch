@@ -2,8 +2,8 @@
 +++ 021_return_codes.c
 @@ -25,7 +25,7 @@
      // (Problem 1)
-     // Write the result of a / b to the location pointed to by out_n.
-     // Remember to dereference the pointer!
+     // Store the quotient in the caller's result variable.
+     // Which expression names that integer rather than its address?
 -    ??? = a / b;
 +    *out_n = a / b;
      
@@ -12,7 +12,7 @@
 @@ -45,7 +45,7 @@
      // Try 5 / 0
      // (Problem 2)
-     // Call divide with 5 and 0.
+     // Exercise the failure path without reading an unwritten result.
 -    status = divide(5, ???, &result);
 +    status = divide(5, 0, &result);
      

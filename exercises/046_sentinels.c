@@ -10,7 +10,8 @@
 
 int main(void) {
     // (Problem 1)
-    // Create an array of integers that ends with -1 as a sentinel.
+    // Use a negative sentinel that cannot be confused with these positive data.
+    // Keep the array and traversal in agreement.
     int nums[] = { 10, 20, 30, 40, ??? };
 
     // (Problem 2)

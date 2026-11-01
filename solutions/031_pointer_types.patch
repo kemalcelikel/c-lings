@@ -3,12 +3,12 @@
 @@ -14,11 +14,11 @@
  
      // (Problem 1)
-     // Declare a pointer to 'letter'.
+     // Complete the declaration to match the object whose address is stored.
 -    ??? p_letter = &letter;
 +    char *p_letter = &letter;
  
      // (Problem 2)
-     // Declare a pointer to 'number'.
+     // Do the same for this different object type.
 -    ??? p_number = &number;
 +    int *p_number = &number;
  

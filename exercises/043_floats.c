@@ -19,7 +19,7 @@ int main(void) {
     // We want to calculate the weight of the Space Shuttle.
     // 4,480,000 lbs * 0.453592 kg/lb
     //
-    // Use 'double' for better precision than 'float'.
+    // Choose the ordinary floating-point type with more precision than float.
     //
     ??? weight_lbs = 4480000.0;
     ??? conversion_factor = 0.453592;
@@ -27,8 +27,7 @@ int main(void) {
     double weight_kg = weight_lbs * conversion_factor;
 
     // (Problem 2)
-    // Format the output.
-    // %.0f prints with 0 decimal places.
+    // Print the computed weight rounded to a whole kilogram.
     printf("Shuttle weight: %f kg\n", weight_kg); // Fix the precision.
 
     // Rounding can make == surprising; this example's outcome is not checked.

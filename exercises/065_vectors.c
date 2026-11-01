@@ -4,9 +4,10 @@
 // baseline accepts this attribute under the normal checker flags.
 // These allow you to perform SIMD operations using standard operators.
 //
-//     typedef float float4 __attribute__((vector_size(16)));
+//     typedef unsigned char byte8 __attribute__((vector_size(8)));
 //
-// On the supported platform, float is 4 bytes: four floats occupy 16 bytes.
+// vector_size takes a byte count, not an element count.
+// On the supported platform, each float occupies 4 bytes.
 //
 
 #include <stdio.h>

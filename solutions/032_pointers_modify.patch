@@ -3,7 +3,7 @@
 @@ -19,12 +19,12 @@
      // (Problem 1)
      // Increment the value of foo using p.
-     // Be careful with operator precedence! (*p)++ or *p += 1.
+     // Change the pointed-to integer, not the pointer's address.
 -    ??? += 1;
 +    *p += 1;
  

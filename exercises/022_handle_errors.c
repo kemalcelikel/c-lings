@@ -8,7 +8,7 @@
 //         // Handle other errors
 //     }
 //
-// A switch chooses a matching case label; break ends that case.
+// A switch chooses a matching case label; break exits the switch.
 // Example: switch (err) { case SUCCESS: break; case ERR_FAIL: break; }
 // We will explore switch further in lesson 025.
 //
@@ -41,8 +41,7 @@ int main(void) {
                 printf("%d is too big!\n", nums[i]);
                 break;
             // (Problem 1)
-            // Handle the TOO_SMALL error case.
-            // Print "%d is too small!\n"
+            // Select the status corresponding to this message.
             case ???:
                 printf("%d is too small!\n", nums[i]);
                 break;

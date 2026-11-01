@@ -13,32 +13,32 @@ int main(void) {
     int val1 = 10;
     int val2 = 20;
 
-    // A pointer to a constant integer.
-    // We cannot change the value it points to, but we can change the pointer.
+    // Read-only access through p1 does not make val1 itself constant.
     const int *p1 = &val1;
     
-    // *p1 = 11; // Error!
-    p1 = &val2; // OK
+    // (Problem 1)
+    // Make p1 refer to the other integer without changing either integer.
+    *p1 = val2;
     printf("p1 points to %d\n", *p1);
 
-    // (Problem 1)
-    // Define a constant pointer to val1.
-    // You should be able to change *p2, but NOT p2 itself.
-    ??? p2 = &val1;
+    int * const p2 = &val1;
     
-    *p2 = 15; // Should be OK
-    // p2 = &val2; // Should be Error if correct
+    // (Problem 2)
+    // Change val1 to 15 through p2 while keeping p2's stored address.
+    p2 = 15;
 
     printf("val1 is %d\n", val1);
     
-    // (Problem 2)
-    // Define a pointer where BOTH are const.
-    ??? p3 = &val2;
+    // (Problem 3)
+    // Both parts of p3 are read-only. Choose its initial target so it reads
+    // the value required by the output; do not change either qualification.
+    const int * const p3 = ???;
     
     printf("p3 points to %d\n", *p3);
 
     return 0;
 }
 
-// CHECK: val1 is 15
-// CHECK: p3 points to 20
+// CHECK-EXACT: p1 points to 20
+// CHECK-EXACT: val1 is 15
+// CHECK-EXACT: p3 points to 20

@@ -1,7 +1,7 @@
 --- 001_hello.c
 +++ 001_hello.c
-@@ -17,6 +17,8 @@
- // Please fix the missing include below so the program compiles!
+@@ -18,6 +18,8 @@
+ // Read the compiler diagnostic to find which header this program needs.
  //
  
 +#include <stdio.h>

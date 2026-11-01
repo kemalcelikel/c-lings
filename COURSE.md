@@ -5,6 +5,21 @@ identifiers precede their suffixes: 032, 032b, 032c, 033, 033b. There is no 063.
 Each starter contains a deliberate task; each solved version has a C patch in
 `solutions/`, except the already complete conclusion.
 
+## Teaching approach
+
+Lessons explain general C rules and leave task-specific repairs to the learner.
+Examples illustrate syntax with separate names and values; expected output
+describes the goal, not the implementation. Quizzes 007, 016, and 019 combine
+earlier concepts with less scaffolding. Repeated topics provide further practice
+rather than repeating a full answer beside a placeholder.
+
+Some supplied code previews later topics: pointer declarations in 004 and array
+parameters in 019, enums in 020, pointer output parameters in 021, switch in 022,
+and allocation in 032b. These previews are explained where they appear; the
+learner's task should remain solvable from those explanations and prior lessons.
+Later dedicated lessons revisit the concepts in more depth. C11 verification
+checks compilation and behavior, not whether an optional optimization occurred.
+
 ## Platform contract
 
 The baseline is Linux, GNU Make, and GCC 11+ with C11, common warnings treated
@@ -54,14 +69,14 @@ use ISO C. POSIX APIs and compiler extensions are identified in the table.
 | 024 | `024_cleanup.c` | Goto cleanup paths |
 | 025 | `025_switch.c` | Cases and default |
 | 026 | `026_switch_break.c` | Switch fallthrough |
-| 027 | `027_unreachable.c` | Debugging assertions |
+| 027 | `027_unreachable.c` | Executed debugging assumptions and unreachable paths |
 | 028 | `028_enums.c` | Enumerated operations |
 | 029 | `029_structs.c` | Struct members |
 | 030 | `030_pointers.c` | Addresses and dereferencing |
 | 031 | `031_pointer_types.c` | Typed pointers |
 | 032 | `032_pointers_modify.c` | Modifying through pointers |
 | 032b | `032b_double_pointers.c` | Pointer output parameters and allocation |
-| 032c | `032c_const_pointers.c` | Pointer const qualifications |
+| 032c | `032c_const_pointers.c` | Compiler-enforced const pointer operations |
 | 033 | `033_pointers_arithmetic.c` | Pointer arithmetic and bounds |
 | 033b | `033b_void_pointers.c` | Generic object pointers |
 | 034 | `034_struct_methods.c` | Struct pointer parameters |
@@ -97,7 +112,7 @@ use ISO C. POSIX APIs and compiler extensions are identified in the table.
 | 065 | `065_vectors.c` | GCC vector extension |
 | 066 | `066_low_level_io.c` | POSIX write and partial transfers |
 | 067 | `067_volatile.c` | Signal flags and POSIX alarm |
-| 068 | `068_inline.c` | Static inline and linkage |
+| 068 | `068_inline.c` | Static inline, linkage, and a helper's behavior |
 | 069 | `069_mutex.c` | POSIX mutex protection |
 | 070 | `070_generics_void.c` | Byte-oriented generic operations |
 | 071 | `071_hashmap.c` | Limited hash-table example |

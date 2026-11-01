@@ -1,19 +1,26 @@
 --- 032c_const_pointers.c
 +++ 032c_const_pointers.c
-@@ -24,7 +24,7 @@
-     // (Problem 1)
-     // Define a constant pointer to val1.
-     // You should be able to change *p2, but NOT p2 itself.
--    ??? p2 = &val1;
-+    int * const p2 = &val1;
+@@ -18,21 +18,21 @@
      
-     *p2 = 15; // Should be OK
-     // p2 = &val2; // Should be Error if correct
-@@ -33,7 +33,7 @@
+     // (Problem 1)
+     // Make p1 refer to the other integer without changing either integer.
+-    *p1 = val2;
++    p1 = &val2;
+     printf("p1 points to %d\n", *p1);
+ 
+     int * const p2 = &val1;
      
      // (Problem 2)
-     // Define a pointer where BOTH are const.
--    ??? p3 = &val2;
+     // Change val1 to 15 through p2 while keeping p2's stored address.
+-    p2 = 15;
++    *p2 = 15;
+ 
+     printf("val1 is %d\n", val1);
+     
+     // (Problem 3)
+     // Both parts of p3 are read-only. Choose its initial target so it reads
+     // the value required by the output; do not change either qualification.
+-    const int * const p3 = ???;
 +    const int * const p3 = &val2;
      
      printf("p3 points to %d\n", *p3);

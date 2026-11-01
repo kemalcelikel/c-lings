@@ -1,8 +1,23 @@
 --- 072_ref_counting.c
 +++ 072_ref_counting.c
-@@ -41,7 +41,7 @@
+@@ -27,19 +27,19 @@
+ void retain(SharedInt *obj) {
+     // (Problem 1)
+     // Record an additional owner without allocating a separate object.
+-    ???;
++    obj->ref_count++;
+     printf("Retained %d (refs: %d)\n", obj->value, obj->ref_count);
+ }
  
-     if (obj->ref_count == 0) {
+ void release(SharedInt *obj) {
+     // (Problem 2)
+     // Record a departing owner and release storage only when none remain.
+-    ???;
++    obj->ref_count--;
+     printf("Released %d (refs: %d)\n", obj->value, obj->ref_count);
+ 
+-    if (???) {
++    if (obj->ref_count == 0) {
          printf("Freeing %d!\n", obj->value);
 -        free(???);
 +        free(obj);

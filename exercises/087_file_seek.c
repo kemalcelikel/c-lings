@@ -19,7 +19,7 @@ int main(void) {
     }
 
     // (Problem 1)
-    // Jump to the 5th byte (index 4) from the beginning.
+    // Select the origin that makes this offset relative to the file's start.
     if (fseek(f, 4, ???) != 0) {
         fclose(f);
         return 1;
@@ -33,14 +33,12 @@ int main(void) {
     }
     printf("Char: %c\n", ch);
 
-    // (Problem 2)
-    // Go to the end of the file.
+    // The final-position query is supplied for comparison.
     if (fseek(f, 0, SEEK_END) != 0) {
         fclose(f);
         return 1;
     }
     
-    // (Problem 3)
     // Get the total size (position).
     long size = ftell(f);
     if (size < 0) {

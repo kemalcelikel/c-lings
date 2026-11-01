@@ -3,7 +3,7 @@
 @@ -32,7 +32,7 @@
                  gen->i++;
                  // (Problem 1)
-                 // Save state to resume here next time!
+                 // Resume with the current position instead of restarting.
 -                gen->state = ???;
 +                gen->state = 1;
                  return 1; // Yield
@@ -12,7 +12,7 @@
 @@ -48,7 +48,7 @@
      int val;
      // (Problem 2)
-     // Loop while range_next returns true (1).
+     // Request values until the iterator reports that it has finished.
 -    while (???) {
 +    while (range_next(&gen, &val)) {
          printf("Yielded: %d\n", val);

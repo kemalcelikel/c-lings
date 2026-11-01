@@ -1,6 +1,6 @@
 --- 062_math_library.c
 +++ 062_math_library.c
-@@ -11,18 +11,18 @@
+@@ -13,18 +13,18 @@
      
      // (Problem 1)
      // Calculate the square root of x.

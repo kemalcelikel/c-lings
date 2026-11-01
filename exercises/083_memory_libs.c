@@ -23,7 +23,7 @@ int main(void) {
     }
 
     // (Problem 2)
-    // Copy these values into the buffer using memcpy.
+    // Copy the complete array into the buffer as bytes.
     int values[] = {1, 2, 3, 4, 5};
     ???(buffer, values, sizeof(values));
 

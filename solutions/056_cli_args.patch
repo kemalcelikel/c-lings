@@ -1,14 +1,14 @@
 --- 056_cli_args.c
 +++ 056_cli_args.c
-@@ -12,12 +12,12 @@
+@@ -14,12 +14,12 @@
  int main(int argc, char *argv[]) {
      // (Problem 1)
-     // Print the number of arguments passed.
+     // Report how many entries the argument array contains.
 -    printf("Arguments count: %d\n", ???);
 +    printf("Arguments count: %d\n", argc);
  
      // (Problem 2)
-     // Loop through all arguments and print them.
+     // Visit each argument in order, staying within the supplied count.
 -    for (int i = 0; i < ???; i++) {
 -        printf("Argument %d: %s\n", i, argv[???]);
 +    for (int i = 0; i < argc; i++) {

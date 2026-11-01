@@ -5,17 +5,19 @@
 //
 // argc: Number of arguments (including the program name).
 // argv: Array of strings.
+// The checker launches this program without extra arguments. You can also
+// compile and run it yourself with arguments to explore the loop's behavior.
 //
 
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
     // (Problem 1)
-    // Print the number of arguments passed.
+    // Report how many entries the argument array contains.
     printf("Arguments count: %d\n", ???);
 
     // (Problem 2)
-    // Loop through all arguments and print them.
+    // Visit each argument in order, staying within the supplied count.
     for (int i = 0; i < ???; i++) {
         printf("Argument %d: %s\n", i, argv[???]);
     }

@@ -3,14 +3,14 @@
 @@ -13,11 +13,11 @@
      if (type == 'i') {
          // (Problem 1)
-         // Cast ptr to int* and dereference it.
+         // Read the object using the type selected by this branch.
 -        printf("Int: %d\n", ???);
-+        printf("Int: %d\n", *(int*)ptr);
++        printf("Int: %d\n", *(int *)ptr);
      } else if (type == 'f') {
          // (Problem 2)
-         // Cast ptr to float* and dereference it.
+         // Read this different object type without changing its representation.
 -        printf("Float: %.1f\n", ???);
-+        printf("Float: %.1f\n", *(float*)ptr);
++        printf("Float: %.1f\n", *(float *)ptr);
      }
  }
  

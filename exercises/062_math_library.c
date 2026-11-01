@@ -1,6 +1,8 @@
 //
 // The C math library <math.h> provides common mathematical functions.
 // Note: You must link with -lm (already handled by the Clings runner).
+// Look up the relevant <math.h> declarations if these functions are new
+// to you: https://en.cppreference.com/w/c/numeric/math.html
 //
 
 #include <stdio.h>

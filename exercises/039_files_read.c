@@ -18,14 +18,13 @@ int main(void) {
     char buffer[100];
     
     // (Problem 1)
-    // Read the first line into buffer.
-    // fgets(buffer, size, file_pointer)
+    // Read the first line from the stream opened above.
     if (fgets(buffer, 100, ???) != NULL) {
         printf("First line: %s", buffer);
     }
 
     // (Problem 2)
-    // Always close files!
+    // Release the stream after reading.
     fclose(???);
 
     return 0;

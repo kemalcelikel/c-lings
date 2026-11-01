@@ -20,7 +20,7 @@ void print_dec(int n) {
 // This function takes an array and a callback.
 void process_array(int *arr, int len, IntCallback cb) {
     for (int i = 0; i < len; i++) {
-        // Call the callback on the current element.
+        // Let the caller's chosen operation process this element.
         ???;
     }
 }
@@ -33,7 +33,7 @@ int main(void) {
 
     printf("\nPrinting in Hex:\n");
     // (Problem 2)
-    // Pass the print_hex function.
+    // Choose the operation matching the requested output format.
     process_array(nums, 3, ???);
 
     return 0;

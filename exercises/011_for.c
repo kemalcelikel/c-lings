@@ -19,7 +19,7 @@ int main(void) {
 
     // (Problem 1)
     // Rewrite the while loop from the previous exercise as a for loop.
-    // Start n at 2. Run while n < 1000. Multiply n by 2 each step.
+    // Preserve its sequence and final value. Which part controls stopping?
     for (n = 2; ???; n = n * 2) {
         printf("%d ", n);
     }

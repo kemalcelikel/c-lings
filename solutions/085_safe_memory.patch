@@ -1,11 +1,11 @@
 --- 085_safe_memory.c
 +++ 085_safe_memory.c
-@@ -19,7 +19,7 @@
+@@ -20,7 +20,7 @@
      // (Problem 1)
-     // To prevent dangling pointer bugs, set the pointer to NULL after freeing.
-     // This only clears p; any other pointers to the freed object still dangle.
+     // Clear this stored address so the later guard and cleanup do not access
+     // the released object. No other aliases exist in this example.
 -    p = ???;
 +    p = NULL;
  
-     // (Problem 2)
-     // Check for NULL before using.
+     // The guard is supplied; it relies on p being updated after release.
+     if (p != NULL) {

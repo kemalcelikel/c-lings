@@ -22,8 +22,7 @@ int main(void) {
     int id1 = 1, id2 = 2;
 
     // (Problem 1)
-    // Create the first thread.
-    // pthread_create(thread_ptr, attributes, function, argument)
+    // Select the entry function that will receive the thread's argument.
     if (pthread_create(&thread1, NULL, ???, &id1) != 0) return 1;
 
     // Create the second thread.

@@ -32,8 +32,8 @@ int main(void) {
     int sum = 10;
     int count = 4;
     
-    // In C, int / int results in an int (truncation).
-    // We need to cast at least one operand to float.
+    // int / int discards the fractional part before any assignment conversion.
+    // Ensure the division itself is floating-point, not just its destination.
     float average = sum / count; // Fix the integer division.
 
     printf("Average: %.1f\n", average);

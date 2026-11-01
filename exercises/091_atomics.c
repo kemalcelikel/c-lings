@@ -3,6 +3,8 @@
 // Atomic operations avoid data races on the atomic object. They need not be
 // lock-free, and do not make a sequence of separate operations indivisible.
 // The threads in this example use POSIX pthreads; the atomics are ISO C11.
+// atomic_int is an atomic integer type. atomic_fetch_add(object, amount)
+// performs one atomic read-modify-write operation and returns the old value.
 //
 
 #include <stdio.h>
@@ -10,15 +12,14 @@
 #include <pthread.h>
 
 // (Problem 1)
-// Define an atomic integer.
+// Choose a type that permits concurrent updates without a data race.
 ??? counter = 0;
 
 void* increment(void* arg) {
     (void)arg;
     for (int i = 0; i < 1000; i++) {
         // (Problem 2)
-        // Atomically increment.
-        // equivalent to counter++ but thread-safe.
+        // Add to the shared object in one atomic read-modify-write operation.
         ???(&counter, 1);
     }
     return NULL;

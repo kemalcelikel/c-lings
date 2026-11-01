@@ -1,9 +1,9 @@
 --- 067_volatile.c
 +++ 067_volatile.c
-@@ -15,7 +15,7 @@
+@@ -16,7 +16,7 @@
  
  // (Problem 1)
- // Add volatile to this sig_atomic_t flag, as in lesson 061.
+ // Qualify this signal flag so the waiting loop observes the handler's changes.
 -??? sig_atomic_t keep_running = 1;
 +volatile sig_atomic_t keep_running = 1;
  

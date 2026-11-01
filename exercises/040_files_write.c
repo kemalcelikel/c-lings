@@ -15,7 +15,7 @@ int main(void) {
     if (f == NULL) return 1;
 
     // (Problem 1)
-    // Write "C is fun" to the file.
+    // Send the formatted text to the file rather than the console.
     if (fprintf(???, "C is %s\n", "fun") < 0) {
         fclose(f);
         return 1;

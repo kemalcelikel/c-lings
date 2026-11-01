@@ -23,8 +23,8 @@ int divide(int a, int b, int *out_n) {
     }
     
     // (Problem 1)
-    // Write the result of a / b to the location pointed to by out_n.
-    // Remember to dereference the pointer!
+    // Store the quotient in the caller's result variable.
+    // Which expression names that integer rather than its address?
     ??? = a / b;
     
     return 0; // Success
@@ -44,7 +44,7 @@ int main(void) {
 
     // Try 5 / 0
     // (Problem 2)
-    // Call divide with 5 and 0.
+    // Exercise the failure path without reading an unwritten result.
     status = divide(5, ???, &result);
     
     if (status != 0) {

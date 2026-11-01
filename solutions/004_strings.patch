@@ -1,20 +1,19 @@
 --- 004_strings.c
 +++ 004_strings.c
-@@ -14,16 +14,16 @@
+@@ -17,15 +17,15 @@
  int main(void) {
      // (Problem 1)
-     // We used single quotes for a string!
+     // This value should represent a string, not a character constant.
 -    const char *dust = 'stardust';
 +    const char *dust = "stardust";
  
      // (Problem 2)
-     // We want to print the letter 'd' (the 5th character, index 4).
+     // Select the letter 'd' from the string.
 -    char d = dust[???];
 +    char d = dust[4];
  
      // (Problem 3)
-     // We are using the wrong format specifier for the character 'd'.
-     // %s is for Strings, %c is for Characters.
+     // Make each printf conversion agree with the corresponding argument.
 -    printf("String: %s, Char: %s\n", dust, d);
 +    printf("String: %s, Char: %c\n", dust, d);
  

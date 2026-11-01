@@ -12,13 +12,8 @@
 
 #include <stdio.h>
 
-// Declare the function prototype if defined after main,
-// or just define it before main.
-// We'll define it before main.
-
 // (Problem 1)
-// Define deepThought() so it returns the integer 42.
-// Replace ??? with the correct return type and syntax.
+// Complete the declaration to agree with the value returned by the function.
 
 ??? deepThought(void) {
     return 42;

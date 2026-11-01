@@ -1,7 +1,8 @@
 //
 // Bit flags allow you to store many boolean states in a single integer.
-// To set a bit at position n: `flags |= (1ul << n)`
-// To check a bit at position n: `flags & (1ul << n)`
+// A mask with one set bit identifies one state. Bitwise OR adds that state
+// without clearing others; bitwise AND tests whether that state is present.
+// For example, 1ul << 3 is a mask for bit position 3.
 // unsigned long has at least 32 bits, enough for the 26-letter alphabet.
 // This lesson assumes ASCII-compatible character codes.
 //
@@ -25,8 +26,7 @@ int is_pangram(const char *str) {
     // (Problem 2)
     // We want to check if all 26 bits are set.
     // That means bits 0 to 25.
-    // The value would be (1ul << 26) - 1.
-    // In hex, that is 0x3FFFFFF.
+    // Construct that mask from the bit count rather than listing the letters.
     return flags == ???;
 }
 

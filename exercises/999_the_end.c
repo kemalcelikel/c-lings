@@ -11,8 +11,8 @@
 // - Bit manipulation and Macros
 // - Signals and the Math library
 //
-// C is a small but powerful language. It gives you complete control
-// over the machine, which is both a blessing and a curse.
+// C is a small but powerful language. Explicit storage, lifetime, and error
+// handling give you useful control and require careful reasoning.
 //
 // Keep practicing, and happy coding!
 //

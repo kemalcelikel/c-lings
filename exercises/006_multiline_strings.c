@@ -12,8 +12,8 @@
 
 int main(void) {
     // (Problem 1)
-    // Join these three lines using adjacent string literals.
-    // Replace the placeholder with "One line at a time.\n".
+    // Complete the text so all three output lines match the checks below.
+    // Pay attention to where each output line ends.
     const char *text = "Learning C\n"
                        ???
                        "Keep practicing!\n";

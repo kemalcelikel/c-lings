@@ -3,11 +3,11 @@
 @@ -27,10 +27,10 @@
      new_node->data = new_data;
      
-     // 3. Make next of new node as head
+     // 3. Preserve the existing list after the new node.
 -    new_node->next = ???;
 +    new_node->next = *head_ref;
      
-     // 4. Move the head to point to the new node
+     // 4. Publish the new start of the list to the caller.
 -    (*head_ref) = ???;
 +    (*head_ref) = new_node;
      return 1;
@@ -17,8 +17,8 @@
      while (head != NULL) {
          tmp = head;
          head = head->next;
--        free(???);
-+        free(tmp);
+-        free(???); // Release the finished node without losing the rest.
++        free(tmp); // Release the finished node without losing the rest.
      }
  }
  

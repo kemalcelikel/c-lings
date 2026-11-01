@@ -24,8 +24,7 @@ int main(void) {
             case 3: printf("C"); break;
             
             // (Problem 1)
-            // Handle all other values with 'default'.
-            // Print a question mark "?"
+            // This branch must handle values without a named case.
             ???:
                 printf("?");
                 break;

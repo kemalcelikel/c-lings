@@ -16,14 +16,13 @@ int main(void) {
     unsigned char b = 0x0a; // 10, binary 00001010
 
     // (Problem 1)
-    // a & b should be 00001000 (8)
-    // a | b should be 00001110 (14)
-    // a ^ b should be 00000110 (6)
+    // AND keeps bits set in both operands; OR keeps bits set in either;
+    // XOR keeps bits set in exactly one operand.
     
     printf("AND: %d\n", a & b);
     printf("OR:  %d\n", a | b);
     
-    // We want 6.
+    // Make this operation agree with its label.
     printf("XOR: %d\n", a | b); // Fix the operator!
 
     return 0;

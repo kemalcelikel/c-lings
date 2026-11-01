@@ -1,7 +1,7 @@
 --- 089_flexible_array.c
 +++ 089_flexible_array.c
-@@ -20,7 +20,7 @@
-     // sizeof(Packet) + len * sizeof(int)
+@@ -21,7 +21,7 @@
+     // Allocate memory for the struct + the array.
      // len is a small fixed positive value here. For external input, also
      // validate the length and check that the allocation size cannot overflow.
 -    Packet *p = malloc(???);

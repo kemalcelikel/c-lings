@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 typedef struct {
-    int state; // "Instruction Pointer"
+    int state; // Selects where the next call resumes.
     int i;     // Local variable
     int max;   // Argument
 } RangeGen;
@@ -31,7 +31,7 @@ int range_next(RangeGen *gen, int *out_val) {
                 *out_val = gen->i;
                 gen->i++;
                 // (Problem 1)
-                // Save state to resume here next time!
+                // Resume with the current position instead of restarting.
                 gen->state = ???;
                 return 1; // Yield
             }
@@ -47,7 +47,7 @@ int main(void) {
 
     int val;
     // (Problem 2)
-    // Loop while range_next returns true (1).
+    // Request values until the iterator reports that it has finished.
     while (???) {
         printf("Yielded: %d\n", val);
     }

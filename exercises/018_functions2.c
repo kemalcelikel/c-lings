@@ -5,8 +5,7 @@
 #include <stdio.h>
 
 // (Problem 1)
-// Give this function the correct input parameter.
-// We want to pass an integer named 'my_number'.
+// Complete the parameter declaration to agree with the body and calls below.
 // We use bit shifting (1u << n) for small nonnegative powers of two.
 // The shift count must be smaller than the width of unsigned int.
 //

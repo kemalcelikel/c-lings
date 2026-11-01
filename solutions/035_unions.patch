@@ -2,7 +2,7 @@
 +++ 035_unions.c
 @@ -36,10 +36,10 @@
      // (Problem 1)
-     // Check the type and print the correct field.
+     // Use the tag to choose the member that was stored in each Number.
      if (n.type == TYPE_INT) {
 -        printf("Int: %d\n", ???);
 +        printf("Int: %d\n", n.data.i);

@@ -36,7 +36,7 @@ int main(void) {
             printf(">4. ");
         }
         // (Problem 1)
-        // Check if the error is TOO_SMALL
+        // Select the status corresponding to the message in this branch.
         if (err == ???) {
             printf("<4. ");
         }

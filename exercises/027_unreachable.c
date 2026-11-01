@@ -1,6 +1,7 @@
 //
-// Sometimes code should be unreachable. If execution reaches it,
-// it's a bug. In C, we can use assert(0) from <assert.h>.
+// assert(condition) from <assert.h> checks an assumption at runtime.
+// A false condition terminates the program with an assertion diagnostic.
+// An always-false assertion can also mark code that should be unreachable.
 // Assertions are disabled when NDEBUG is defined; they are debugging aids,
 // not a substitute for validating external input.
 //
@@ -9,8 +10,11 @@
 #include <assert.h>
 
 int main(void) {
-    // Choose mode 1 so the valid path runs. Also complete the assertion below.
-    int mode = ???;
+    int mode = 1;
+
+    // The switch supports two modes. Repair this assumption so either
+    // supported mode is accepted and unsupported modes are rejected.
+    assert(mode == 2);
 
     switch (mode) {
         case 1:
@@ -21,9 +25,7 @@ int main(void) {
             break;
         default:
             // This mode should never happen!
-            // (Problem 1)
-            // Crash the program with an assertion failure.
-            assert(???);
+            assert(0);
             break;
     }
     return 0;

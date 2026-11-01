@@ -3,7 +3,7 @@
 @@ -20,7 +20,7 @@
      // (Problem 1)
      // We want to print the third element (30).
-     // Advance the pointer by 2 positions.
+     // Count the distance from the pointer's current element.
 -    p += ???;
 +    p += 2;
  

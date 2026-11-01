@@ -1,6 +1,6 @@
 --- 047_struct_init.c
 +++ 047_struct_init.c
-@@ -13,7 +13,7 @@
+@@ -12,7 +12,7 @@
      // Choose one union representation when writing and reading it.
      // Here we use x and y; the array alternative is not active.
      struct {
@@ -9,7 +9,7 @@
              int xy[2];
              struct {
                  int x;
-@@ -29,7 +29,7 @@
+@@ -28,7 +28,7 @@
      struct Sprite hero = {
          .name = "Cleo",
          .pos = {

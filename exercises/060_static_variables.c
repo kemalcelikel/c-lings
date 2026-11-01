@@ -13,8 +13,8 @@
 
 void increment_and_print(void) {
     // (Problem 1)
-    // Declare a static integer named 'call_count' initialized to 0.
-    int call_count = 0; // Add the storage-class keyword.
+    // Keep this function-local count across calls rather than starting over.
+    int call_count = 0;
     
     call_count++;
     printf("Call count: %d\n", call_count);

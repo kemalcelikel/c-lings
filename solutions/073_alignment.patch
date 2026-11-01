@@ -1,9 +1,9 @@
 --- 073_alignment.c
 +++ 073_alignment.c
-@@ -22,7 +22,7 @@
- 
+@@ -23,7 +23,7 @@
  // (Problem 1)
- // Add the attribute to pack this struct.
+ // Request the packed layout for this definition, keeping the ordinary
+ // definition above unchanged. Consider why this is an explicit choice.
 -struct ??? Packed {
 +struct __attribute__((packed)) Packed {
      char c;

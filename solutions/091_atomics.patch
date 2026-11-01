@@ -1,18 +1,17 @@
 --- 091_atomics.c
 +++ 091_atomics.c
-@@ -11,7 +11,7 @@
+@@ -13,14 +13,14 @@
  
  // (Problem 1)
- // Define an atomic integer.
+ // Choose a type that permits concurrent updates without a data race.
 -??? counter = 0;
 +atomic_int counter = 0;
  
  void* increment(void* arg) {
      (void)arg;
-@@ -19,7 +19,7 @@
+     for (int i = 0; i < 1000; i++) {
          // (Problem 2)
-         // Atomically increment.
-         // equivalent to counter++ but thread-safe.
+         // Add to the shared object in one atomic read-modify-write operation.
 -        ???(&counter, 1);
 +        atomic_fetch_add(&counter, 1);
      }

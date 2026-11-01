@@ -36,7 +36,7 @@ int main(void) {
 
     // (Problem 1)
     // Set the last character to 's' using a hex literal.
-    // 's' is 115 decimal (0x73).
+    // Convert its decimal character code to the requested notation.
     msg[3] = ???;
 
     printf("%c%c%c%c cool.\n", msg[0], msg[1], msg[2], msg[3]);

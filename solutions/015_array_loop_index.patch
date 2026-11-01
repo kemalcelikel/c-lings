@@ -1,9 +1,9 @@
 --- 015_array_loop_index.c
 +++ 015_array_loop_index.c
 @@ -19,7 +19,7 @@
-         // We can use the shift operator (1 << i) for powers of 2,
-         // which is more idiomatic in C than pow().
-         // Replace the placeholder with the current bit position.
+         // A left shift by k positions multiplies 1 by 2 to the power k.
+         // Choose the exponent belonging to this bit's place in the array.
+         // These small shift counts stay within the range of int.
 -        int place_value = (1 << ???); 
 +        int place_value = (1 << i); 
          

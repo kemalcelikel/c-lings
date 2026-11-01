@@ -3,7 +3,7 @@
 @@ -13,7 +13,7 @@
  
      // (Problem 1)
-     // Recursive call.
+     // Reduce the problem toward the base case on every recursive call.
 -    return n * factorial(???);
 +    return n * factorial(n - 1);
  }

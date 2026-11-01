@@ -1,16 +1,16 @@
 --- 039_files_read.c
 +++ 039_files_read.c
-@@ -20,13 +20,13 @@
+@@ -19,13 +19,13 @@
+     
      // (Problem 1)
-     // Read the first line into buffer.
-     // fgets(buffer, size, file_pointer)
+     // Read the first line from the stream opened above.
 -    if (fgets(buffer, 100, ???) != NULL) {
 +    if (fgets(buffer, 100, f) != NULL) {
          printf("First line: %s", buffer);
      }
  
      // (Problem 2)
-     // Always close files!
+     // Release the stream after reading.
 -    fclose(???);
 +    fclose(f);
  

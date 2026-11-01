@@ -2,8 +2,8 @@
 +++ 075_singleton.c
 @@ -17,7 +17,7 @@
      // (Problem 1)
-     // Define a static variable 'instance'.
-     // It will be initialized only once!
+     // The returned object's lifetime must extend beyond this call.
+     // Keep one function-local instance shared by subsequent callers.
 -    ??? Config instance = { .id = 1, .data = 0 };
 +    static Config instance = { .id = 1, .data = 0 };
      return &instance;

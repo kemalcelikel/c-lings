@@ -17,12 +17,12 @@ int main(void) {
     char src[] = " World";
 
     // (Problem 1)
-    // Append src to dest.
+    // Extend the destination string with the source text.
     ???(dest, src);
     printf("Concat: %s\n", dest);
 
     // (Problem 2)
-    // Check if dest is now "Hello World".
+    // Select the comparison result representing a match.
     if (strcmp(dest, "Hello World") == ???) {
         printf("Match!\n");
     } else {

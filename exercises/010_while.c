@@ -12,7 +12,8 @@ int main(void) {
     int n = 2;
 
     // (Problem 1)
-    // Please use a condition that is true UNTIL "n" reaches 1024.
+    // Keep doubling n until it reaches the final value in the output check.
+    // The loop condition is tested before each iteration.
     while (???) {
         printf("%d ", n);
         n *= 2;

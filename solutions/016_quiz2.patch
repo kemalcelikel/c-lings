@@ -1,11 +1,13 @@
 --- 016_quiz2.c
 +++ 016_quiz2.c
-@@ -16,7 +16,7 @@
-         if (i % 3 == 0) printf("Fizz");
-         if (i % 5 == 0) printf("Buzz");
-         // "and" in C is "&&", "not" is "!"
--        if (???) {
-+        if (!(i % 3 == 0) && !(i % 5 == 0)) {
-             printf("%d", i);
-         }
+@@ -15,7 +15,9 @@
+     int stop_at = 16;
+ 
+     for (int i = 1; i <= stop_at; i++) {
+-        ???;
++        if (i % 3 == 0) printf("Fizz");
++        if (i % 5 == 0) printf("Buzz");
++        if (i % 3 != 0 && i % 5 != 0) printf("%d", i);
          printf(", ");
+     }
+     printf("\n");

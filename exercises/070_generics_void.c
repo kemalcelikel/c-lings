@@ -21,7 +21,7 @@ int generic_swap(void *a, void *b, size_t size) {
     memcpy(tmp, a, size);
     memcpy(a, b, size);
     // (Problem 1)
-    // Copy from tmp to b.
+    // Complete the swap by restoring the saved bytes to their new destination.
     memcpy(???, ???, size);
     
     free(tmp);

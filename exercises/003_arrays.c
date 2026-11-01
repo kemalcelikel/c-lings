@@ -12,20 +12,22 @@
 // Get values using array[index]:
 //
 //     int bar = foo[2]; // 5423
+// Indices start at zero: the first element has index 0.
 //
 // Set values:
 //
 //     foo[2] = 16;
 //
-// In C, arrays don't store their length! You have to calculate it
-// using sizeof(array) / sizeof(array[0]) (total bytes / bytes per element).
+// sizeof gives an object's size in bytes. For an actual array, dividing
+// its byte size by one element's byte size gives the element count.
+// This does not work on a pointer: sizeof then gives the pointer's size.
 //
 
 #include <stdio.h>
 
 int main(void) {
     // (Problem 1)
-    // This "const" is going to cause a problem later.
+    // The array's declaration must allow the operation below.
     const int some_primes[] = { 1, 3, 5, 7, 11, 13, 17, 19 };
 
     // We want to change the first element to 2.
@@ -34,15 +36,14 @@ int main(void) {
     int first = some_primes[0];
 
     // (Problem 2)
-    // Access the fourth element (index 3).
-    // Array indices start at zero. Replace the placeholder before running.
+    // Access the fourth element. Count from the array's first index.
     int index_of_fourth = ???;
     int value_of_fourth = some_primes[index_of_fourth];
 
     // (Problem 3)
     // Calculate the length.
     // sizeof produces size_t; print it with %zu.
-    size_t length = 0; // Fix me! Use sizeof!
+    size_t length = 0; // Derive this from the array, not a hardcoded count.
 
     printf("First: %d, Fourth: %d, Length: %zu\n", first, value_of_fourth, length);
     

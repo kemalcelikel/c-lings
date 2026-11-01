@@ -1,8 +1,9 @@
 //
 // Memory safety is critical in C.
-// 1. Double Free: Freeing the same pointer twice.
-// 2. Dangling Pointer: Using a pointer after freeing it.
-// 3. NULL Dereference: Using a NULL pointer.
+// 1. Double free: Releasing an allocation that has already been released.
+// 2. Dangling pointer: A pointer whose target's lifetime has ended.
+// 3. Null dereference: Attempting to access an object through a null pointer.
+// A pointer can be cleared after release, but other aliases are not cleared.
 //
 
 #include <stdio.h>
@@ -17,14 +18,12 @@ int main(void) {
 
     free(p);
     // (Problem 1)
-    // To prevent dangling pointer bugs, set the pointer to NULL after freeing.
-    // This only clears p; any other pointers to the freed object still dangle.
+    // Clear this stored address so the later guard and cleanup do not access
+    // the released object. No other aliases exist in this example.
     p = ???;
 
-    // (Problem 2)
-    // Check for NULL before using.
+    // The guard is supplied; it relies on p being updated after release.
     if (p != NULL) {
-        // This won't happen now!
         printf("Value: %d\n", *p);
     }
 

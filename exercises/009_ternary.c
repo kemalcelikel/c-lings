@@ -14,9 +14,8 @@
 int main(void) {
     int discount = 1; // 1 means true in C
 
-    // Please use the ternary operator to set the price.
-    // If discount is true (1), price is 17.
-    // Otherwise, price is 20.
+    // Complete the price expression: a discount reduces the price to 17.
+    // Without a discount, the price is 20.
     
     int price = discount ???;
 

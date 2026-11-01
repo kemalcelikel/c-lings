@@ -1,9 +1,9 @@
 --- 030_pointers.c
 +++ 030_pointers.c
-@@ -19,7 +19,7 @@
+@@ -18,7 +18,7 @@
+ 
      // (Problem 1)
-     // Make num2 equal to the value num1_pointer points to.
-     // Use the dereference operator *.
+     // Obtain num2 through num1_pointer, rather than naming num1 directly.
 -    num2 = ???;
 +    num2 = *num1_pointer;
  

@@ -1,9 +1,9 @@
 --- 010_while.c
 +++ 010_while.c
-@@ -13,7 +13,7 @@
- 
+@@ -14,7 +14,7 @@
      // (Problem 1)
-     // Please use a condition that is true UNTIL "n" reaches 1024.
+     // Keep doubling n until it reaches the final value in the output check.
+     // The loop condition is tested before each iteration.
 -    while (???) {
 +    while (n < 1024) {
          printf("%d ", n);

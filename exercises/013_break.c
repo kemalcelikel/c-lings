@@ -7,7 +7,7 @@
 int main(void) {
     int n = 1;
 
-    // This loop would go forever if we don't break it!
+    // End the loop at the value in the output check.
     while (1) {
         if (n == 4) ???;
         n++;

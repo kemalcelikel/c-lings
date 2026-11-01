@@ -13,11 +13,11 @@
 #include <stdio.h>
 
 // (Problem 1)
-// Define a macro named MAX that returns the larger of two values.
+// Complete MAX's expression so it selects the larger operand.
 #define MAX(a, b) (???) 
 
 // (Problem 2)
-// Define a macro named MIN that returns the smaller of two values.
+// Complete MIN's expression so it selects the smaller operand.
 #define MIN(a, b) (???)
 
 int main(void) {

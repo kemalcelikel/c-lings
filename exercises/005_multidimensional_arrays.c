@@ -19,8 +19,7 @@ int main(void) {
     };
 
     // (Problem 1)
-    // We want to print the number 4 (row index 1, column index 1).
-    // Please fix the indices.
+    // Select the matrix element containing the value in the expected output.
     int x = matrix[0][0]; 
 
     printf("The value is: %d\n", x);

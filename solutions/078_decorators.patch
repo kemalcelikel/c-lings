@@ -3,7 +3,7 @@
 @@ -22,7 +22,7 @@
      
      // (Problem 1)
-     // Call the passed function.
+     // Obtain the result from the caller's operation while retaining the logging.
 -    int result = ???;
 +    int result = op(a, b);
      
@@ -12,7 +12,7 @@
 @@ -31,7 +31,7 @@
  int main(void) {
      // (Problem 2)
-     // Wrap the 'add' function.
+     // Select the operation matching the ADD label.
 -    logged_operation(???, "ADD", 10, 20);
 +    logged_operation(add, "ADD", 10, 20);
  

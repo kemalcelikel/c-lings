@@ -21,8 +21,8 @@ void* waiter(void* arg) {
     pthread_cond_signal(&cond); // Tell the signaler that the waiter started.
     
     // (Problem 1)
-    // Wait until 'ready' is true.
-    // pthread_cond_wait(cond, mutex)
+    // Sleep while the predicate is false, allowing the signaler to acquire
+    // the mutex and change it. Keep the recheck loop intact.
     while (!ready) {
         ???(&cond, &lock);
     }

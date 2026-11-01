@@ -1,11 +1,11 @@
 --- 029_structs.c
 +++ 029_structs.c
-@@ -35,7 +35,7 @@
+@@ -31,7 +31,7 @@
  struct Character {
      Role role;
      int gold;
--    ???; // Add health
-+    int health; // Add health
+-    ???;
++    int health;
  };
  
  int main(void) {

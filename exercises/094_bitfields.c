@@ -8,12 +8,12 @@
 
 struct Flags {
     // (Problem 1)
-    // Use only 1 bit for these booleans.
+    // Give each Boolean state the smallest unsigned field that holds 0 and 1.
     unsigned int is_visible : ???;
     unsigned int has_physics : ???;
     
     // (Problem 2)
-    // Use 3 bits for type (values 0-7).
+    // Give type enough bits for values 0 through 7, with no unused high bits.
     unsigned int type : ???;
 };
 

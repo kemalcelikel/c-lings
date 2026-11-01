@@ -26,10 +26,10 @@ int push(struct Node **head_ref, int new_data) {
     // 2. Put in the data
     new_node->data = new_data;
     
-    // 3. Make next of new node as head
+    // 3. Preserve the existing list after the new node.
     new_node->next = ???;
     
-    // 4. Move the head to point to the new node
+    // 4. Publish the new start of the list to the caller.
     (*head_ref) = ???;
     return 1;
 }
@@ -41,7 +41,7 @@ void freeList(struct Node *head) {
     while (head != NULL) {
         tmp = head;
         head = head->next;
-        free(???);
+        free(???); // Release the finished node without losing the rest.
     }
 }
 

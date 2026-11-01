@@ -3,7 +3,7 @@
 @@ -27,7 +27,7 @@
  
      // (Problem 1)
-     // We are done with the memory. Free it!
+     // Release the allocation now that it is no longer needed.
 -    free(???);
 +    free(p);
  

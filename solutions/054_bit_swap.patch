@@ -1,7 +1,7 @@
 --- 054_bit_swap.c
 +++ 054_bit_swap.c
-@@ -21,7 +21,7 @@
-     // Complete the XOR swap.
+@@ -20,7 +20,7 @@
+     // Recover the other original value in the final step.
      x ^= y;
      y ^= x;
 -    x ^= ???;

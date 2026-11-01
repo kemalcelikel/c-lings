@@ -3,7 +3,7 @@
 @@ -21,7 +21,7 @@
  void process_array(int *arr, int len, IntCallback cb) {
      for (int i = 0; i < len; i++) {
-         // Call the callback on the current element.
+         // Let the caller's chosen operation process this element.
 -        ???;
 +        cb(arr[i]);
      }
@@ -12,7 +12,7 @@
 @@ -34,7 +34,7 @@
      printf("\nPrinting in Hex:\n");
      // (Problem 2)
-     // Pass the print_hex function.
+     // Choose the operation matching the requested output format.
 -    process_array(nums, 3, ???);
 +    process_array(nums, 3, print_hex);
  

@@ -13,8 +13,8 @@
 int main(void) {
     // Print numbers 1 to 20, but skip those divisible by 3 or 5.
     for (int n = 1; n <= 20; n++) {
-        // Use the modulo operator % to check divisibility.
-        // Fill in the statements that skip this iteration.
+        // These conditions use % (remainder) to identify unwanted numbers.
+        // Leave the loop running, but prevent those numbers from being printed.
         if (n % 3 == 0) ???;
         if (n % 5 == 0) ???;
         

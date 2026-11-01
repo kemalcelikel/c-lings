@@ -19,7 +19,7 @@ int main(void) {
     
     // (Problem 1)
     // We want to print the third element (30).
-    // Advance the pointer by 2 positions.
+    // Count the distance from the pointer's current element.
     p += ???;
 
     printf("Third element: %d\n", *p);

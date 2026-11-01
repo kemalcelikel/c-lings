@@ -8,7 +8,7 @@
 
 int main(void) {
     // (Problem 1)
-    // Use the bool type.
+    // Use the standard Boolean alias supplied by the included header.
     ??? is_valid = true;
 
     if (is_valid) {
@@ -16,7 +16,7 @@ int main(void) {
     }
 
     // (Problem 2)
-    // Set it to false.
+    // Change the state so the second message is printed.
     is_valid = ???;
 
     if (!is_valid) {

@@ -17,8 +17,8 @@ int main(void) {
 
     // We want to add more numbers! Resize to hold 4 integers.
     // (Problem 1)
-    // Use realloc.
-    int *new_arr = realloc(arr, sizeof(int) * ???);
+    // Derive the byte count from the element type; preserve existing values.
+    int *new_arr = ???;
 
     if (new_arr == NULL) {
         free(arr); // realloc didn't free original on failure

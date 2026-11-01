@@ -7,7 +7,7 @@
 
 int main(void) {
     // (Problem 1)
-    // Get "USER", the conventional login-name variable on Linux.
+    // Read the conventional Linux login-name variable, USER.
     // Environment variables may be absent, so keep the guest fallback.
     char *user = getenv(???);
 

@@ -16,7 +16,7 @@ int main(void) {
     const char *msg = "Hello from low-level C!\n";
 
     // (Problem 1)
-    // Write the message to stdout (1).
+    // Choose the standard-output descriptor for this transfer.
     // write can write fewer bytes than requested. Keep sending the remainder.
     size_t length = strlen(msg);
     size_t sent = 0;

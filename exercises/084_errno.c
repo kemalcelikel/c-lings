@@ -15,15 +15,13 @@ int main(void) {
     FILE *f = fopen("non_existent_file.txt", "r");
 
     if (f == NULL) {
-        // Save errno before another library call might change it.
+        // Preserve the failure's error code before later calls can change it.
         int saved_error = ???;
-        // (Problem 1)
-        // Print the error message with a prefix "File error".
+        // The diagnostic and symbolic-code check are supplied below.
         errno = saved_error;
         perror("File error"); // This diagnostic goes to stderr.
         
-        // (Problem 2)
-        // You can also access the error code directly.
+        // Report the preserved code independently of the diagnostic's wording.
         printf("Error code: %d\n", saved_error);
         if (saved_error != ENOENT) return 1;
         printf("Missing file detected.\n");

@@ -12,7 +12,7 @@ unsigned long long factorial(int n) {
     if (n <= 0) return 1;
 
     // (Problem 1)
-    // Recursive call.
+    // Reduce the problem toward the base case on every recursive call.
     return n * factorial(???);
 }
 

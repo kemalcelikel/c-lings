@@ -1,9 +1,9 @@
 --- 032b_double_pointers.c
 +++ 032b_double_pointers.c
-@@ -23,7 +23,7 @@
+@@ -21,7 +21,7 @@
+     if (*pp == NULL) return;
      
-     // (Problem 2)
-     // Dereference again to set the value.
+     // Store value in the newly allocated integer through pp.
 -    ??? = value;
 +    **pp = value;
  }

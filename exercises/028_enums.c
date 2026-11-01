@@ -10,7 +10,7 @@
 #include <stdio.h>
 
 // (Problem 1)
-// Define an enum named 'Ops' with values: INC, DEC, POW.
+// Complete the operation type so it supports all the operations below.
 typedef enum {
     INC,
     DEC,

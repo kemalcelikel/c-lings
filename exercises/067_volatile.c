@@ -1,7 +1,8 @@
 //
 // The 'volatile' keyword tells the compiler that a variable's value
-// might change at any time without any action being taken by the code.
-// This prevents the compiler from optimizing out "unnecessary" reads.
+// may change through mechanisms outside ordinary execution, such as a
+// signal handler. Accesses must be evaluated according to the implementation's
+// volatile rules rather than replacing repeated reads with a cached value.
 //
 // It is commonly used for variables shared with signal handlers
 // or memory-mapped hardware.
@@ -14,7 +15,7 @@
 #include <unistd.h>
 
 // (Problem 1)
-// Add volatile to this sig_atomic_t flag, as in lesson 061.
+// Qualify this signal flag so the waiting loop observes the handler's changes.
 ??? sig_atomic_t keep_running = 1;
 
 void handle_alarm(int sig) {

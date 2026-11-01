@@ -13,11 +13,11 @@ int main(void) {
     int number = 10;
 
     // (Problem 1)
-    // Declare a pointer to 'letter'.
+    // Complete the declaration to match the object whose address is stored.
     ??? p_letter = &letter;
 
     // (Problem 2)
-    // Declare a pointer to 'number'.
+    // Do the same for this different object type.
     ??? p_number = &number;
 
     printf("%c %d\n", *p_letter, *p_number);

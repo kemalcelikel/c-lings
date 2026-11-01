@@ -1,6 +1,7 @@
 //
-// In multi-threaded programs, we must prevent multiple threads from
-// accessing shared resources simultaneously. We use Mutexes (Mutual Exclusions).
+// Conflicting unsynchronized accesses to shared objects cause data races.
+// A mutex (mutual exclusion) protects a critical section so only one thread
+// at a time executes it while holding that mutex.
 // pthread mutexes are POSIX APIs, not ISO C. volatile cannot replace a mutex.
 //
 //     pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
@@ -23,13 +24,13 @@ void* count_up(void* arg) {
     (void)arg;
     for (int i = 0; i < 10000; i++) {
         // (Problem 2)
-        // Lock the mutex before accessing 'counter'.
+    // Enter the critical section before updating the shared object.
         ???(&lock);
         
         counter++;
         
         // (Problem 3)
-        // Unlock it immediately after!
+    // Allow another thread to enter after the update is complete.
         ???(&lock);
     }
     return NULL;

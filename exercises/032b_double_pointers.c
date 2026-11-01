@@ -15,14 +15,12 @@
 #include <stdlib.h>
 
 void allocate_int(int **pp, int value) {
-    // (Problem 1)
-    // Allocate memory for an integer.
+    // The allocation and failure handling are supplied for this pointer task.
     // *pp refers to the pointer itself (ptr in main).
     *pp = malloc(sizeof(int));
     if (*pp == NULL) return;
     
-    // (Problem 2)
-    // Dereference again to set the value.
+    // Store value in the newly allocated integer through pp.
     ??? = value;
 }
 

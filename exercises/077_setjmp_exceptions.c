@@ -22,8 +22,7 @@ void risky_function(int x) {
     if (x == 0) {
         printf("Error: x is 0! Throwing exception...\n");
         // (Problem 1)
-        // Jump back to the setjmp point.
-        // longjmp(buffer, return_value)
+        // Return to the context established by main, carrying error 100.
         longjmp(???, 100);
     }
     printf("x is %d (fine)\n", x);

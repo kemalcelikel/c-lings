@@ -1,9 +1,9 @@
 --- 080_do_while.c
 +++ 080_do_while.c
-@@ -22,7 +22,7 @@
+@@ -20,7 +20,7 @@
+         simulator++;
          
-         // (Problem 2)
-         // Stop when simulator is 5.
+         // Continue only while another attempt is needed.
 -    } while (???);
 +    } while (simulator < 5);
  

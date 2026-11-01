@@ -1,9 +1,18 @@
 --- 037_calloc.c
 +++ 037_calloc.c
-@@ -27,7 +27,7 @@
+@@ -12,7 +12,7 @@
+ int main(void) {
+     // Obtain storage for five integers that initially contain zero.
+     // Do not add a separate initialization loop.
+-    int *nums = ???;
++    int *nums = calloc(5, sizeof(int));
+     
+     if (nums == NULL) return 1;
+ 
+@@ -28,7 +28,7 @@
  
      // (Problem 1)
-     // Don't forget to free!
+     // Release the allocation after its last use.
 -    free(???);
 +    free(nums);
  

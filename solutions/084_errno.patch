@@ -3,9 +3,9 @@
 @@ -16,7 +16,7 @@
  
      if (f == NULL) {
-         // Save errno before another library call might change it.
+         // Preserve the failure's error code before later calls can change it.
 -        int saved_error = ???;
 +        int saved_error = errno;
-         // (Problem 1)
-         // Print the error message with a prefix "File error".
+         // The diagnostic and symbolic-code check are supplied below.
          errno = saved_error;
+         perror("File error"); // This diagnostic goes to stderr.

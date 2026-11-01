@@ -3,7 +3,7 @@
 @@ -37,7 +37,7 @@
      // (Problem 1)
      // Set the last character to 's' using a hex literal.
-     // 's' is 115 decimal (0x73).
+     // Convert its decimal character code to the requested notation.
 -    msg[3] = ???;
 +    msg[3] = 0x73;
  

@@ -19,6 +19,18 @@ explanations and incidental bugs while preserving their intended learner tasks.
 
 - Teach focused concepts using C terminology, with enough explanation in the
   comments and earlier lessons to solve the task.
+- Explain the general rule with examples using different names and values from
+  the learner's task. State the intended behavior without giving the exact edit,
+  placeholder value, or complete task-specific expression beside the broken code.
+- Leave a meaningful decision for the learner. Reduce guidance when revisiting
+  a concept; quizzes should combine earlier concepts with less scaffolding and
+  should not introduce new concepts in the work the learner must implement.
+- Distinguish task instructions from explanations of supplied code. Mark only
+  unfinished work as a problem, and identify previews of later concepts explicitly.
+- Check the advertised behavior, including relevant alternative inputs or states.
+  Output alone cannot prove use of a particular keyword, qualification, or
+  optimization; use compiler-enforced constraints where appropriate and do not
+  claim that a passing output check establishes more than it actually checks.
 - Keep C11 and the strict checker flags. Label POSIX APIs and GCC extensions.
 - Correct solutions must avoid undefined behavior, invalid lifetimes, leaks,
   unchecked failed allocations, and uninitialized reads.

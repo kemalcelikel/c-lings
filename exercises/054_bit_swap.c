@@ -1,9 +1,8 @@
 //
 // You can swap two integers without a temporary variable using XOR (^).
 //
-//     x = x ^ y;
-//     y = y ^ x;
-//     x = x ^ y;
+// XOR has two useful properties: a ^ a is zero, and a ^ 0 is a.
+// Combining the two original values lets each be recovered from the other.
 //
 // This trick requires distinct objects. In ordinary code, prefer a temporary
 // variable: it is clearer and also works when references alias the same object.
@@ -18,7 +17,7 @@ int main(void) {
     printf("Before swap: x=%d, y=%d\n", x, y);
 
     // (Problem 1)
-    // Complete the XOR swap.
+    // Recover the other original value in the final step.
     x ^= y;
     y ^= x;
     x ^= ???;

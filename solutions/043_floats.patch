@@ -1,8 +1,8 @@
 --- 043_floats.c
 +++ 043_floats.c
-@@ -21,15 +21,15 @@
+@@ -21,14 +21,14 @@
      //
-     // Use 'double' for better precision than 'float'.
+     // Choose the ordinary floating-point type with more precision than float.
      //
 -    ??? weight_lbs = 4480000.0;
 -    ??? conversion_factor = 0.453592;
@@ -12,8 +12,7 @@
      double weight_kg = weight_lbs * conversion_factor;
  
      // (Problem 2)
-     // Format the output.
-     // %.0f prints with 0 decimal places.
+     // Print the computed weight rounded to a whole kilogram.
 -    printf("Shuttle weight: %f kg\n", weight_kg); // Fix the precision.
 +    printf("Shuttle weight: %.0f kg\n", weight_kg); // Fix the precision.
  

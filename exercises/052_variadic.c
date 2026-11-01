@@ -15,17 +15,17 @@ int sum_all(int count, ...) {
     va_list args;
     
     // (Problem 1)
-    // Initialize the argument list.
+    // Begin traversal of the arguments following the named parameter.
     ???(args, count);
 
     for (int i = 0; i < count; i++) {
         // (Problem 2)
-        // Get the next argument of type int.
+        // Retrieve the type that this function's callers promise to supply.
         total += va_arg(args, ???);
     }
 
     // (Problem 3)
-    // Clean up the argument list.
+    // Finish the traversal before returning.
     ???(args);
 
     return total;

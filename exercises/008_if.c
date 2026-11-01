@@ -12,6 +12,10 @@
 //     if (1) { ... } // True
 //     if (0) { ... } // False
 //
+// Assignment (=) stores a value; equality (==) compares two values.
+// Conditions can be combined with && (both true), || (either true),
+// and ! (logical negation). For example: age >= 18 && has_ticket.
+//
 
 #include <stdio.h>
 
@@ -19,8 +23,7 @@ int main(void) {
     int foo = 42;
 
     // (Problem 1)
-    // Please check if foo is equal to 42.
-    // Remember, use '==' for comparison, not '='!
+    // This branch should test foo without changing it.
     if (foo = 42) {
         printf("Foo is 42!\n");
     } else {

@@ -1,8 +1,8 @@
 --- 017_functions.c
 +++ 017_functions.c
-@@ -20,7 +20,7 @@
- // Define deepThought() so it returns the integer 42.
- // Replace ??? with the correct return type and syntax.
+@@ -15,7 +15,7 @@
+ // (Problem 1)
+ // Complete the declaration to agree with the value returned by the function.
  
 -??? deepThought(void) {
 +int deepThought(void) {

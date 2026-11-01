@@ -10,11 +10,12 @@
 //     }
 //
 // To print to the console, we usually use the `printf` function.
-// However, to use it, we must include the Standard Input/Output library.
+// Its declaration is provided by the standard input/output header.
+// A header tells the compiler about functions supplied elsewhere.
 //
-//     #include <stdio.h>
+//     #include <header_name.h>
 //
-// Please fix the missing include below so the program compiles!
+// Read the compiler diagnostic to find which header this program needs.
 //
 
 int main(void) {

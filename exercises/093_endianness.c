@@ -1,7 +1,8 @@
 //
 // Endianness refers to the order of bytes in memory.
-// Little Endian: LSB at lowest address (Intel/AMD).
-// Big Endian: MSB at lowest address (Network).
+// Little endian: least significant byte at the lowest address.
+// Big endian: most significant byte at the lowest address; network protocols
+// commonly specify this order. Do not infer host order from a platform name.
 //
 
 #include <stdio.h>

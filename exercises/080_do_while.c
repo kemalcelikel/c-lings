@@ -10,7 +10,6 @@
 #include <stdio.h>
 
 int main(void) {
-    // (Problem 1)
     // We want to simulate reading input until a valid number (e.g. 5) is found.
     // In this simulation, we'll increment a variable.
     
@@ -20,8 +19,7 @@ int main(void) {
         printf("Checking simulator: %d\n", simulator);
         simulator++;
         
-        // (Problem 2)
-        // Stop when simulator is 5.
+        // Continue only while another attempt is needed.
     } while (???);
 
     printf("Done!\n");

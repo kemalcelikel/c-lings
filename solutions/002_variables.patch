@@ -1,11 +1,10 @@
 --- 002_variables.c
 +++ 002_variables.c
-@@ -19,7 +19,7 @@
+@@ -20,7 +20,6 @@
      const int pi = 314159;
      
-     // Oh no! We are trying to change a constant!
+     // Does this operation agree with the declaration above?
 -    pi = 3;
-+    /* pi remains constant. */
  
      printf("x: %d, pi: %d\n", x, pi);
      return 0;

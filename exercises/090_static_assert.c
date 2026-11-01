@@ -13,13 +13,12 @@ struct Data {
 };
 
 int main(void) {
-    // (Problem 1)
-    // Assert that int occupies at least one byte, as required by C.
-    _Static_assert(???, "Integer size invalid!");
+    // A supplied example of a guaranteed language property.
+    _Static_assert(sizeof(int) >= 1, "Integer size invalid!");
 
-    // (Problem 2)
-    // A struct must have space for its members, plus any padding.
-    _Static_assert(sizeof(struct Data) >= sizeof(char) + sizeof(int),
+    // Express the minimum space this struct needs for its members without
+    // assuming a particular int size or an exact amount of padding.
+    _Static_assert(???,
                    "Struct cannot hold its members!");
 
     printf("Compile checks passed.\n");

@@ -24,8 +24,7 @@ int main(void) {
     FILE *f = fopen("data.bin", "wb");
     if (f == NULL) return 1;
     // (Problem 1)
-    // Write the struct to the file.
-    // Ptr, Size of Element, Count, Stream
+    // Supply the address of the record whose bytes will be written.
     int wrote = fwrite(???, sizeof(Record), 1, f) == 1;
     int closed = fclose(f) == 0;
     if (!wrote || !closed) return 1;
@@ -35,7 +34,7 @@ int main(void) {
     f = fopen("data.bin", "rb");
     if (f == NULL) return 1;
     // (Problem 2)
-    // Read back into r2.
+    // Supply writable storage for the record being read.
     int read_ok = fread(???, sizeof(Record), 1, f) == 1;
     closed = fclose(f) == 0;
     if (!read_ok || !closed) return 1;
