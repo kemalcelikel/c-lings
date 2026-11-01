@@ -13,34 +13,61 @@ is needed to learn, test, or maintain Clings.
 
 ## Getting started
 
-The supported baseline is **Linux, GCC 11+, and GNU Make**. Windows users can
-use WSL. Native Windows and macOS have not been verified for the whole course.
-Some advanced lessons use clearly identified POSIX APIs or GCC extensions.
+**Already have this repository on your computer? Start at step 3.**
 
-On Debian or Ubuntu:
+### 1. Install the tools
+
+On Ubuntu or Debian, open a terminal and run:
 
 ```sh
 sudo apt update
-sudo apt install build-essential
+sudo apt install build-essential git
+```
+
+This installs the tools that build and check your C programs. On Windows, use
+an Ubuntu terminal in WSL.
+
+### 2. Download Clings
+
+```sh
 git clone https://github.com/kemalcelikel/c-lings.git clings
 cd clings
+```
+
+### 3. Start the first lesson
+
+In your terminal, open the Clings folder—the folder containing this README and
+the `Makefile`—and run:
+
+```sh
 make
 ```
 
-`make` automatically builds the native checker, then checks lessons in order.
-It should stop at `exercises/001_hello.c`: the missing `<stdio.h>` include is
-your first task.
+**An error on the first run is expected.** The lessons are broken on purpose.
+The checker will stop and tell you which file to fix.
 
-1. Read the diagnostics and the exercise's comments.
-2. Edit the `.c` file in `exercises/`.
-3. Run **`make` again**.
+For your first lesson, open **`exercises/001_hello.c`** in a text editor. Read
+the comments at the top: they explain what is missing and how to fix it.
 
-The checker saves progress after each successful lesson and resumes at the next
-unfinished lesson. It stops at the first compiler, runtime, or output failure.
-Earlier completed lessons are not rechecked by default; use `make all` to recheck
-everything. There is no automatic watch mode.
+### 4. Fix, save, and run again
 
-## Useful commands
+After editing the lesson, **save the file**, return to your terminal, and run:
+
+```sh
+make
+```
+
+- If it still fails, read the error, edit the same file, save, and try again.
+- If it prints `PASSED!`, the checker automatically tries the next lesson.
+- Open the next file where it stops and repeat.
+
+Your everyday loop is **edit → save → `make`**. Leave the `// CHECK` comments
+unchanged; they tell the checker what the correct program should print.
+
+Progress is saved automatically. When you come back later, run `make` in the
+Clings folder to continue where you left off.
+
+## Useful commands (optional)
 
 ```sh
 make n=032b       # Check one lesson
@@ -74,6 +101,10 @@ invocations accept `--cc` or the `CC` environment variable; it must identify a
 single compiler executable. GCC is the verified baseline.
 
 ## How checking works
+
+The supported baseline is Linux, GCC 11+, and GNU Make. Native Windows and macOS
+have not been verified for the whole course. Some advanced lessons use clearly
+identified POSIX APIs or GCC extensions.
 
 Exercises compile with:
 
