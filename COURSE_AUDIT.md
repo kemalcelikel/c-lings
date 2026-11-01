@@ -100,6 +100,12 @@ occupancy. Collision overwriting is already disclosed; implementing collision
 handling should be a separate subsequent lesson/addition, not quietly claimed
 as existing coverage.
 
+**Fixed in lesson 071:** entries now track occupancy, retaining support for empty
+keys and stored value 0. Exact checks cover an absent empty key, its insertion,
+the named keys, and an ordinary miss. Removing the occupancy guard reproduces
+the old false hit and is now rejected. Collision resolution remains a separate
+planned addition.
+
 ## Individual lesson review
 
 **Keep** means no urgent change identified, not exhaustive proof of correctness.
@@ -209,7 +215,7 @@ meaningful exercise or supporting verification capability.
 
 ## Recommended implementation sequence
 
-1. **Fix the concrete 071 lookup defect.** One lesson commit.
+1. **Fix the concrete 071 lookup defect.** Completed as its own lesson change.
 2. **Improve existing observable checks**, starting with 009, 010, 011, 043,
    047, 053, 080, 083, and 094. One lesson per commit, with its updated patch.
 3. **Fill early foundations:** scalar types/formats, logic/precedence/short
