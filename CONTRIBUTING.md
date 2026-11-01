@@ -30,6 +30,18 @@ explanations and incidental bugs while preserving their intended learner tasks.
 - Preserve existing filenames/identifiers. When deliberately changing the course
   inventory, update `src/course.h`, `COURSE.md`, and the README count together.
 
+## Solution patches and verification
+
+`solutions/` contains maintainer answers; learners work in `exercises/`. Each
+intentionally broken lesson needs a minimal solution patch. The complete
+conclusion needs no patch.
+
+Maintainer commands require GCC, GNU Make, and the standard `patch` and `diff`
+utilities. Verification applies patches to temporary copies, checks exact course
+and patch coverage, runs every solved lesson, and confirms that starters retain
+their intended tasks. Missing, extra, malformed, or non-applicable patches fail
+verification. Saved learner progress is neither read nor updated.
+
 Create a solved copy outside learner sources, with its original filename. Include
 any course source files it reads in the answers directory. Then run:
 
@@ -44,15 +56,14 @@ The script builds the native checker, validates the solved copy, and generates a
 minimal patch with `diff`. An invalid or identical answer fails without replacing
 the existing patch. Use `CC=gcc-12 sh tools/make_patch.sh PATH` to select a compiler.
 Only broken learner sources and their patches belong in commits, not solved
-working copies or generated files. The conclusion needs no patch.
+working copies or generated files.
 
 Commit each lesson fix or addition separately after verification. Include its
 patch and directly required registry/inventory/count/test updates; keep unrelated
 lesson edits and shared checker changes in separate commits. Preserve local
 learner answers. When those answers are already solved, run maintenance checks
 against a clean committed/staged snapshot containing the intended change rather
-than resetting learner files. See [COURSE_AUDIT.md](COURSE_AUDIT.md) for the
-coverage review and prioritized lesson work.
+than resetting learner files.
 
 ## Runner and tooling changes
 

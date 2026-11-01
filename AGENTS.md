@@ -20,7 +20,6 @@ knowledge or installation is required. Retain upstream license attribution.
 - `tests/test_runner.c`, `tests/test_cli.sh`: native and CLI/Make regression tests.
 - `.github/workflows/ci.yml`: Ubuntu 22.04/24.04 GCC and sanitizer verification.
 - `README.md`, `CONTRIBUTING.md`, `COURSE.md`: setup, maintenance, and inventory.
-- `PLAN.md`, `NATIVE_WORKFLOW.md`: conversion status and native workflow design.
 
 ## Learner workflow
 
