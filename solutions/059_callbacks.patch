@@ -1,0 +1,20 @@
+--- 059_callbacks.c
++++ 059_callbacks.c
+@@ -21,7 +21,7 @@
+ void process_array(int *arr, int len, IntCallback cb) {
+     for (int i = 0; i < len; i++) {
+         // Call the callback on the current element.
+-        ???;
++        cb(arr[i]);
+     }
+ }
+ 
+@@ -34,7 +34,7 @@
+     printf("\nPrinting in Hex:\n");
+     // (Problem 2)
+     // Pass the print_hex function.
+-    process_array(nums, 3, ???);
++    process_array(nums, 3, print_hex);
+ 
+     return 0;
+ }

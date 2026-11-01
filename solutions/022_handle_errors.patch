@@ -1,0 +1,11 @@
+--- 022_handle_errors.c
++++ 022_handle_errors.c
+@@ -43,7 +43,7 @@
+             // (Problem 1)
+             // Handle the TOO_SMALL error case.
+             // Print "%d is too small!\n"
+-            case ???:
++            case ERR_TOO_SMALL:
+                 printf("%d is too small!\n", nums[i]);
+                 break;
+         }

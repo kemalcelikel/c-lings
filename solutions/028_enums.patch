@@ -1,0 +1,11 @@
+--- 028_enums.c
++++ 028_enums.c
+@@ -14,7 +14,7 @@
+ typedef enum {
+     INC,
+     DEC,
+-    ???
++    POW
+ } Ops;
+ 
+ int main(void) {

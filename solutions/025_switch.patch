@@ -1,0 +1,11 @@
+--- 025_switch.c
++++ 025_switch.c
+@@ -26,7 +26,7 @@
+             // (Problem 1)
+             // Handle all other values with 'default'.
+             // Print a question mark "?"
+-            ???:
++            default:
+                 printf("?");
+                 break;
+         }

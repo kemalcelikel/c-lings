@@ -1,0 +1,20 @@
+--- 078_decorators.c
++++ 078_decorators.c
+@@ -22,7 +22,7 @@
+     
+     // (Problem 1)
+     // Call the passed function.
+-    int result = ???;
++    int result = op(a, b);
+     
+     printf("--- Result: %d ---\n", result);
+     return result;
+@@ -31,7 +31,7 @@
+ int main(void) {
+     // (Problem 2)
+     // Wrap the 'add' function.
+-    logged_operation(???, "ADD", 10, 20);
++    logged_operation(add, "ADD", 10, 20);
+ 
+     // Wrap the 'mul' function.
+     logged_operation(mul, "MUL", 5, 5);

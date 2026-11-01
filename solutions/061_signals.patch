@@ -1,0 +1,11 @@
+--- 061_signals.c
++++ 061_signals.c
+@@ -22,7 +22,7 @@
+     // (Problem 1)
+     // Register the handler for SIGINT (Ctrl+C).
+     // signal(SIGNAL_TYPE, handler_function)
+-    if (signal(SIGINT, ???) == SIG_ERR) return 1;
++    if (signal(SIGINT, handle_interrupt) == SIG_ERR) return 1;
+ 
+     printf("Running... (Wait, we will simulate a signal in this exercise)\n");
+     

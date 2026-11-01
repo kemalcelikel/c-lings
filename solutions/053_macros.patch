@@ -1,0 +1,16 @@
+--- 053_macros.c
++++ 053_macros.c
+@@ -14,11 +14,11 @@
+ 
+ // (Problem 1)
+ // Define a macro named MAX that returns the larger of two values.
+-#define MAX(a, b) (???) 
++#define MAX(a, b) ((a) > (b) ? (a) : (b)) 
+ 
+ // (Problem 2)
+ // Define a macro named MIN that returns the smaller of two values.
+-#define MIN(a, b) (???)
++#define MIN(a, b) ((a) < (b) ? (a) : (b))
+ 
+ int main(void) {
+     int x = 10;

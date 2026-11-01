@@ -1,0 +1,11 @@
+--- 023_propagate_errors.c
++++ 023_propagate_errors.c
+@@ -37,7 +37,7 @@
+     err = step2();
+     // (Problem 1)
+     // If step2 failed, we should return the error immediately!
+-    if (err != SUCCESS) ???;
++    if (err != SUCCESS) return err;
+ 
+     err = step3();
+     if (err != SUCCESS) return err;

@@ -1,0 +1,11 @@
+--- 058_recursion.c
++++ 058_recursion.c
+@@ -13,7 +13,7 @@
+ 
+     // (Problem 1)
+     // Recursive call.
+-    return n * factorial(???);
++    return n * factorial(n - 1);
+ }
+ 
+ int main(void) {

@@ -1,0 +1,20 @@
+--- 086_binary_io.c
++++ 086_binary_io.c
+@@ -26,7 +26,7 @@
+     // (Problem 1)
+     // Write the struct to the file.
+     // Ptr, Size of Element, Count, Stream
+-    int wrote = fwrite(???, sizeof(Record), 1, f) == 1;
++    int wrote = fwrite(&r1, sizeof(Record), 1, f) == 1;
+     int closed = fclose(f) == 0;
+     if (!wrote || !closed) return 1;
+ 
+@@ -36,7 +36,7 @@
+     if (f == NULL) return 1;
+     // (Problem 2)
+     // Read back into r2.
+-    int read_ok = fread(???, sizeof(Record), 1, f) == 1;
++    int read_ok = fread(&r2, sizeof(Record), 1, f) == 1;
+     closed = fclose(f) == 0;
+     if (!read_ok || !closed) return 1;
+         

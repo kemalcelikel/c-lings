@@ -1,0 +1,20 @@
+--- 021_return_codes.c
++++ 021_return_codes.c
+@@ -25,7 +25,7 @@
+     // (Problem 1)
+     // Write the result of a / b to the location pointed to by out_n.
+     // Remember to dereference the pointer!
+-    ??? = a / b;
++    *out_n = a / b;
+     
+     return 0; // Success
+ }
+@@ -45,7 +45,7 @@
+     // Try 5 / 0
+     // (Problem 2)
+     // Call divide with 5 and 0.
+-    status = divide(5, ???, &result);
++    status = divide(5, 0, &result);
+     
+     if (status != 0) {
+         printf("Cannot divide by zero!\n");

@@ -1,0 +1,11 @@
+--- 057_env_vars.c
++++ 057_env_vars.c
+@@ -9,7 +9,7 @@
+     // (Problem 1)
+     // Get "USER", the conventional login-name variable on Linux.
+     // Environment variables may be absent, so keep the guest fallback.
+-    char *user = getenv(???);
++    char *user = getenv("USER");
+ 
+     if (user != NULL) {
+         printf("Hello, %s!\n", user);

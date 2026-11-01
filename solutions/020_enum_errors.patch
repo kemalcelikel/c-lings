@@ -1,0 +1,11 @@
+--- 020_enum_errors.c
++++ 020_enum_errors.c
+@@ -37,7 +37,7 @@
+         }
+         // (Problem 1)
+         // Check if the error is TOO_SMALL
+-        if (err == ???) {
++        if (err == TOO_SMALL) {
+             printf("<4. ");
+         }
+         if (err == TOO_FOUR) {

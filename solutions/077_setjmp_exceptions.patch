@@ -1,0 +1,20 @@
+--- 077_setjmp_exceptions.c
++++ 077_setjmp_exceptions.c
+@@ -24,7 +24,7 @@
+         // (Problem 1)
+         // Jump back to the setjmp point.
+         // longjmp(buffer, return_value)
+-        longjmp(???, 100);
++        longjmp(exception_env, 100);
+     }
+     printf("x is %d (fine)\n", x);
+ }
+@@ -35,7 +35,7 @@
+     // setjmp returns 0 on initial save, and non-zero when longjmp is called.
+     // ISO C restricts where setjmp may appear. Use it directly as a switch
+     // controlling expression, not in a variable initializer.
+-    switch (setjmp(???)) {
++    switch (setjmp(exception_env)) {
+     case 0:
+         printf("Try block start.\n");
+         risky_function(10);

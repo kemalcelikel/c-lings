@@ -1,0 +1,11 @@
+--- 008_if.c
++++ 008_if.c
+@@ -21,7 +21,7 @@
+     // (Problem 1)
+     // Please check if foo is equal to 42.
+     // Remember, use '==' for comparison, not '='!
+-    if (foo = 42) {
++    if (foo == 42) {
+         printf("Foo is 42!\n");
+     } else {
+         printf("Foo is not 42?\n");

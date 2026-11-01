@@ -1,0 +1,15 @@
+--- 035_unions.c
++++ 035_unions.c
+@@ -36,10 +36,10 @@
+     // (Problem 1)
+     // Check the type and print the correct field.
+     if (n.type == TYPE_INT) {
+-        printf("Int: %d\n", ???);
++        printf("Int: %d\n", n.data.i);
+     } else if (n.type == TYPE_FLOAT) {
+         // Print float with 2 decimal places
+-        printf("Float: %.2f\n", ???);
++        printf("Float: %.2f\n", n.data.f);
+     }
+ }
+ 

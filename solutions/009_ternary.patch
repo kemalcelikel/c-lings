@@ -1,0 +1,11 @@
+--- 009_ternary.c
++++ 009_ternary.c
+@@ -18,7 +18,7 @@
+     // If discount is true (1), price is 17.
+     // Otherwise, price is 20.
+     
+-    int price = discount ???;
++    int price = discount ? 17 : 20;
+ 
+     printf("Price: $%d\n", price);
+     return 0;

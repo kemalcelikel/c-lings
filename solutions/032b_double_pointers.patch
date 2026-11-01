@@ -1,0 +1,11 @@
+--- 032b_double_pointers.c
++++ 032b_double_pointers.c
+@@ -23,7 +23,7 @@
+     
+     // (Problem 2)
+     // Dereference again to set the value.
+-    ??? = value;
++    **pp = value;
+ }
+ 
+ int main(void) {

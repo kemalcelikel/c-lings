@@ -1,0 +1,11 @@
+--- 090_static_assert.c
++++ 090_static_assert.c
+@@ -15,7 +15,7 @@
+ int main(void) {
+     // (Problem 1)
+     // Assert that int occupies at least one byte, as required by C.
+-    _Static_assert(???, "Integer size invalid!");
++    _Static_assert(sizeof(int) >= 1, "Integer size invalid!");
+ 
+     // (Problem 2)
+     // A struct must have space for its members, plus any padding.

@@ -1,0 +1,20 @@
+--- 092_cond_var.c
++++ 092_cond_var.c
+@@ -24,7 +24,7 @@
+     // Wait until 'ready' is true.
+     // pthread_cond_wait(cond, mutex)
+     while (!ready) {
+-        ???(&cond, &lock);
++        pthread_cond_wait(&cond, &lock);
+     }
+     
+     printf("Signal received!\n");
+@@ -42,7 +42,7 @@
+     
+     // (Problem 2)
+     // Signal the waiting thread.
+-    ???(&cond);
++    pthread_cond_signal(&cond);
+     
+     pthread_mutex_unlock(&lock);
+     return NULL;

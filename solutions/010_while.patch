@@ -1,0 +1,11 @@
+--- 010_while.c
++++ 010_while.c
+@@ -13,7 +13,7 @@
+ 
+     // (Problem 1)
+     // Please use a condition that is true UNTIL "n" reaches 1024.
+-    while (???) {
++    while (n < 1024) {
+         printf("%d ", n);
+         n *= 2;
+     }

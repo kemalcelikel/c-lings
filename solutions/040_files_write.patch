@@ -1,0 +1,11 @@
+--- 040_files_write.c
++++ 040_files_write.c
+@@ -16,7 +16,7 @@
+ 
+     // (Problem 1)
+     // Write "C is fun" to the file.
+-    if (fprintf(???, "C is %s\n", "fun") < 0) {
++    if (fprintf(f, "C is %s\n", "fun") < 0) {
+         fclose(f);
+         return 1;
+     }

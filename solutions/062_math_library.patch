@@ -1,0 +1,24 @@
+--- 062_math_library.c
++++ 062_math_library.c
+@@ -11,18 +11,18 @@
+     
+     // (Problem 1)
+     // Calculate the square root of x.
+-    double root = ???;
++    double root = sqrt(x);
+ 
+     // (Problem 2)
+     // Calculate 2 raised to the power of 10.
+-    double power = ???;
++    double power = pow(2, 10);
+ 
+     printf("Sqrt of %.1f is %.1f\n", x, root);
+     printf("2^10 is %.1f\n", power);
+ 
+     // (Problem 3)
+     // Round 3.7 to the nearest integer (4.0).
+-    double rounded = ???;
++    double rounded = round(3.7);
+     printf("3.7 rounded is %.1f\n", rounded);
+ 
+     return 0;

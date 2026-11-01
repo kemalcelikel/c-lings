@@ -1,0 +1,20 @@
+--- 088_stdbool.c
++++ 088_stdbool.c
+@@ -9,7 +9,7 @@
+ int main(void) {
+     // (Problem 1)
+     // Use the bool type.
+-    ??? is_valid = true;
++    bool is_valid = true;
+ 
+     if (is_valid) {
+         printf("Valid!\n");
+@@ -17,7 +17,7 @@
+ 
+     // (Problem 2)
+     // Set it to false.
+-    is_valid = ???;
++    is_valid = false;
+ 
+     if (!is_valid) {
+         printf("Not valid!\n");

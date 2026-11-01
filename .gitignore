@@ -1,9 +1,10 @@
-/.zig-cache/
-/zig-out/
+/clings
+/tests/test_runner
+/.clings-progress
+/.clings-progress.*
+*.out
+*.o
+*.gcda
+*.gcno
 /answers/
-/patches/healed/
 /output/
-.progress.txt
-
-# Leave this in here for older zig versions
-/zig-cache/

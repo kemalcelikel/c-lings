@@ -1,0 +1,17 @@
+--- 032_pointers_modify.c
++++ 032_pointers_modify.c
+@@ -19,12 +19,12 @@
+     // (Problem 1)
+     // Increment the value of foo using p.
+     // Be careful with operator precedence! (*p)++ or *p += 1.
+-    ??? += 1;
++    *p += 1;
+ 
+     p = &bar;
+     // (Problem 2)
+     // Increment the value of bar using p.
+-    ??? += 1;
++    *p += 1;
+ 
+     printf("foo=%d, bar=%d\n", foo, bar);
+     return 0;

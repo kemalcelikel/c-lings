@@ -1,0 +1,24 @@
+--- 049_linked_list.c
++++ 049_linked_list.c
+@@ -27,10 +27,10 @@
+     new_node->data = new_data;
+     
+     // 3. Make next of new node as head
+-    new_node->next = ???;
++    new_node->next = *head_ref;
+     
+     // 4. Move the head to point to the new node
+-    (*head_ref) = ???;
++    (*head_ref) = new_node;
+     return 1;
+ }
+ 
+@@ -41,7 +41,7 @@
+     while (head != NULL) {
+         tmp = head;
+         head = head->next;
+-        free(???);
++        free(tmp);
+     }
+ }
+ 

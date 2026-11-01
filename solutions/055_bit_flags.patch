@@ -1,0 +1,20 @@
+--- 055_bit_flags.c
++++ 055_bit_flags.c
+@@ -18,7 +18,7 @@
+             int bit_pos = c - 'a';
+             // (Problem 1)
+             // Set the bit at bit_pos in the 'flags' variable.
+-            flags |= ???;
++            flags |= (1ul << bit_pos);
+         }
+     }
+     
+@@ -27,7 +27,7 @@
+     // That means bits 0 to 25.
+     // The value would be (1ul << 26) - 1.
+     // In hex, that is 0x3FFFFFF.
+-    return flags == ???;
++    return flags == 0x3FFFFFFul;
+ }
+ 
+ int main(void) {

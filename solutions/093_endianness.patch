@@ -1,0 +1,11 @@
+--- 093_endianness.c
++++ 093_endianness.c
+@@ -13,7 +13,7 @@
+     // (Problem 1)
+     // unsigned char pointers may inspect any object's representation.
+     // Exact-width uint32_t and 8-bit bytes are assumed in this example.
+-    unsigned char *bytes = ???;
++    unsigned char *bytes = (unsigned char*)&num;
+ 
+     printf("Bytes: %x %x %x %x\n", (unsigned int)bytes[0],
+            (unsigned int)bytes[1], (unsigned int)bytes[2], (unsigned int)bytes[3]);

@@ -1,0 +1,27 @@
+--- 046_sentinels.c
++++ 046_sentinels.c
+@@ -11,13 +11,13 @@
+ int main(void) {
+     // (Problem 1)
+     // Create an array of integers that ends with -1 as a sentinel.
+-    int nums[] = { 10, 20, 30, 40, ??? };
++    int nums[] = { 10, 20, 30, 40, -1 };
+ 
+     // (Problem 2)
+     // Loop through the array until you hit the sentinel.
+     // Do NOT use a length variable.
+     int i = 0;
+-    while (nums[i] != ???) {
++    while (nums[i] != -1) {
+         printf("%d ", nums[i]);
+         i++;
+     }
+@@ -27,7 +27,7 @@
+     // String length calculation.
+     const char *str = "Hello";
+     int len = 0;
+-    while (str[len] != ???) {
++    while (str[len] != '\0') {
+         len++;
+     }
+     printf("Length: %d\n", len);

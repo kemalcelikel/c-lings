@@ -1,0 +1,11 @@
+--- 054_bit_swap.c
++++ 054_bit_swap.c
+@@ -21,7 +21,7 @@
+     // Complete the XOR swap.
+     x ^= y;
+     y ^= x;
+-    x ^= ???;
++    x ^= y;
+ 
+     printf("After swap:  x=%d, y=%d\n", x, y);
+ 

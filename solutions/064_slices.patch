@@ -1,0 +1,11 @@
+--- 064_slices.c
++++ 064_slices.c
+@@ -32,7 +32,7 @@
+ 
+     // (Problem 2)
+     // Create a slice for the rest of the cards (starting at index 4).
+-    CharSlice hand2 = { .ptr = ???, .len = ??? };
++    CharSlice hand2 = { .ptr = &cards[4], .len = 4 };
+ 
+     printf("Hand 1: ");
+     print_slice(hand1);

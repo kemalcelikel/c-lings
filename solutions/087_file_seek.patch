@@ -1,0 +1,11 @@
+--- 087_file_seek.c
++++ 087_file_seek.c
+@@ -20,7 +20,7 @@
+ 
+     // (Problem 1)
+     // Jump to the 5th byte (index 4) from the beginning.
+-    if (fseek(f, 4, ???) != 0) {
++    if (fseek(f, 4, SEEK_SET) != 0) {
+         fclose(f);
+         return 1;
+     }

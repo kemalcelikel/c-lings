@@ -6,4 +6,6 @@
 
 # Text files to always have LF (unix) line endings on checkout.
 *.sh text eol=lf
-*.zig text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.patch text eol=lf

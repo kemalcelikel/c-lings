@@ -1,0 +1,11 @@
+--- 080_do_while.c
++++ 080_do_while.c
+@@ -22,7 +22,7 @@
+         
+         // (Problem 2)
+         // Stop when simulator is 5.
+-    } while (???);
++    } while (simulator < 5);
+ 
+     printf("Done!\n");
+     return 0;

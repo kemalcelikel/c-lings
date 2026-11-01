@@ -1,0 +1,11 @@
+--- 018_functions2.c
++++ 018_functions2.c
+@@ -10,7 +10,7 @@
+ // We use bit shifting (1u << n) for small nonnegative powers of two.
+ // The shift count must be smaller than the width of unsigned int.
+ //
+-unsigned int twoToThe(???) {
++unsigned int twoToThe(int my_number) {
+     return 1u << my_number;
+ }
+ 

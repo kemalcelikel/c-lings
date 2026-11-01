@@ -1,0 +1,11 @@
+--- 073_alignment.c
++++ 073_alignment.c
+@@ -22,7 +22,7 @@
+ 
+ // (Problem 1)
+ // Add the attribute to pack this struct.
+-struct ??? Packed {
++struct __attribute__((packed)) Packed {
+     char c;
+     int i;
+ };

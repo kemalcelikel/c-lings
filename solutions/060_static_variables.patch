@@ -1,0 +1,11 @@
+--- 060_static_variables.c
++++ 060_static_variables.c
+@@ -14,7 +14,7 @@
+ void increment_and_print(void) {
+     // (Problem 1)
+     // Declare a static integer named 'call_count' initialized to 0.
+-    int call_count = 0; // Add the storage-class keyword.
++    static int call_count = 0; // Add the storage-class keyword.
+     
+     call_count++;
+     printf("Call count: %d\n", call_count);

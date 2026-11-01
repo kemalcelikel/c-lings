@@ -1,0 +1,16 @@
+--- 033b_void_pointers.c
++++ 033b_void_pointers.c
+@@ -13,11 +13,11 @@
+     if (type == 'i') {
+         // (Problem 1)
+         // Cast ptr to int* and dereference it.
+-        printf("Int: %d\n", ???);
++        printf("Int: %d\n", *(int*)ptr);
+     } else if (type == 'f') {
+         // (Problem 2)
+         // Cast ptr to float* and dereference it.
+-        printf("Float: %.1f\n", ???);
++        printf("Float: %.1f\n", *(float*)ptr);
+     }
+ }
+ 

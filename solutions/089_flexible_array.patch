@@ -1,0 +1,11 @@
+--- 089_flexible_array.c
++++ 089_flexible_array.c
+@@ -20,7 +20,7 @@
+     // sizeof(Packet) + len * sizeof(int)
+     // len is a small fixed positive value here. For external input, also
+     // validate the length and check that the allocation size cannot overflow.
+-    Packet *p = malloc(???);
++    Packet *p = malloc(sizeof(Packet) + (size_t)len * sizeof(int));
+     if (p == NULL) return 1;
+     
+     p->length = len;

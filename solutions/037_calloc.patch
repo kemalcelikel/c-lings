@@ -1,0 +1,11 @@
+--- 037_calloc.c
++++ 037_calloc.c
+@@ -27,7 +27,7 @@
+ 
+     // (Problem 1)
+     // Don't forget to free!
+-    free(???);
++    free(nums);
+ 
+     return 0;
+ }

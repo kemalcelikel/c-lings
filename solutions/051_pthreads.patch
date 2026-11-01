@@ -1,0 +1,20 @@
+--- 051_pthreads.c
++++ 051_pthreads.c
+@@ -24,7 +24,7 @@
+     // (Problem 1)
+     // Create the first thread.
+     // pthread_create(thread_ptr, attributes, function, argument)
+-    if (pthread_create(&thread1, NULL, ???, &id1) != 0) return 1;
++    if (pthread_create(&thread1, NULL, thread_func, &id1) != 0) return 1;
+ 
+     // Create the second thread.
+     if (pthread_create(&thread2, NULL, thread_func, &id2) != 0) {
+@@ -35,7 +35,7 @@
+     // (Problem 2)
+     // Wait for the threads to finish.
+     int result1 = pthread_join(thread1, NULL);
+-    int result2 = pthread_join(???, NULL);
++    int result2 = pthread_join(thread2, NULL);
+     if (result1 != 0 || result2 != 0) return 1;
+ 
+     printf("All threads joined.\n");

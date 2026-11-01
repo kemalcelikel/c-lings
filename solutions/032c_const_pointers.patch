@@ -1,0 +1,20 @@
+--- 032c_const_pointers.c
++++ 032c_const_pointers.c
+@@ -24,7 +24,7 @@
+     // (Problem 1)
+     // Define a constant pointer to val1.
+     // You should be able to change *p2, but NOT p2 itself.
+-    ??? p2 = &val1;
++    int * const p2 = &val1;
+     
+     *p2 = 15; // Should be OK
+     // p2 = &val2; // Should be Error if correct
+@@ -33,7 +33,7 @@
+     
+     // (Problem 2)
+     // Define a pointer where BOTH are const.
+-    ??? p3 = &val2;
++    const int * const p3 = &val2;
+     
+     printf("p3 points to %d\n", *p3);
+ 

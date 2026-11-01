@@ -1,0 +1,35 @@
+name: C course
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: GCC on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, ubuntu-24.04]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install C verification tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential patch diffutils
+      - name: Tool versions
+        run: |
+          make --version
+          gcc --version
+      - name: Runner regression tests
+        run: make test
+      - name: Verify every solved exercise
+        run: make verify
+      - name: Verify with address and undefined-behavior sanitizers
+        run: make verify-sanitize
+      - name: Check native runner with sanitizers
+        run: |
+          make clean
+          make test CFLAGS="-std=c11 -Wall -Wextra -Werror -pedantic -O1 -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -fno-pie -no-pie"
+      - name: Confirm verification leaves the checkout clean
+        run: test -z "$(git status --porcelain)"

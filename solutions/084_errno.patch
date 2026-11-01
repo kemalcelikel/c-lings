@@ -1,0 +1,11 @@
+--- 084_errno.c
++++ 084_errno.c
+@@ -16,7 +16,7 @@
+ 
+     if (f == NULL) {
+         // Save errno before another library call might change it.
+-        int saved_error = ???;
++        int saved_error = errno;
+         // (Problem 1)
+         // Print the error message with a prefix "File error".
+         errno = saved_error;

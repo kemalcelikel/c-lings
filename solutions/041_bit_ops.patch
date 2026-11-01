@@ -1,0 +1,11 @@
+--- 041_bit_ops.c
++++ 041_bit_ops.c
+@@ -24,7 +24,7 @@
+     printf("OR:  %d\n", a | b);
+     
+     // We want 6.
+-    printf("XOR: %d\n", a | b); // Fix the operator!
++    printf("XOR: %d\n", a ^ b); // Fix the operator!
+ 
+     return 0;
+ }

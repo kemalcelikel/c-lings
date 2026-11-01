@@ -1,0 +1,11 @@
+--- 066_low_level_io.c
++++ 066_low_level_io.c
+@@ -21,7 +21,7 @@
+     size_t length = strlen(msg);
+     size_t sent = 0;
+     while (sent < length) {
+-        ssize_t count = write(???, msg + sent, length - sent);
++        ssize_t count = write(1, msg + sent, length - sent);
+         if (count < 0 && errno == EINTR) continue;
+         if (count <= 0) return 1;
+         sent += (size_t)count;

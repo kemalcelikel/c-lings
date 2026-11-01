@@ -1,0 +1,18 @@
+--- 007_quiz.c
++++ 007_quiz.c
+@@ -30,13 +30,13 @@
+     result[1] = letters[5];
+ 
+     // R
+-    result[2] = letters[???];
++    result[2] = letters[2];
+ 
+     // u
+     result[3] = letters[0];
+ 
+     // l
+-    result[4] = letters[???];
++    result[4] = letters[1];
+ 
+     // e
+     result[5] = letters[3];

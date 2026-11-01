@@ -1,0 +1,18 @@
+--- 094_bitfields.c
++++ 094_bitfields.c
+@@ -9,12 +9,12 @@
+ struct Flags {
+     // (Problem 1)
+     // Use only 1 bit for these booleans.
+-    unsigned int is_visible : ???;
+-    unsigned int has_physics : ???;
++    unsigned int is_visible : 1;
++    unsigned int has_physics : 1;
+     
+     // (Problem 2)
+     // Use 3 bits for type (values 0-7).
+-    unsigned int type : ???;
++    unsigned int type : 3;
+ };
+ 
+ int main(void) {

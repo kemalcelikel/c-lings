@@ -1,0 +1,26 @@
+--- 069_mutex.c
++++ 069_mutex.c
+@@ -17,20 +17,20 @@
+ 
+ // (Problem 1)
+ // Define the mutex.
+-pthread_mutex_t lock = ???;
++pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+ 
+ void* count_up(void* arg) {
+     (void)arg;
+     for (int i = 0; i < 10000; i++) {
+         // (Problem 2)
+         // Lock the mutex before accessing 'counter'.
+-        ???(&lock);
++        pthread_mutex_lock(&lock);
+         
+         counter++;
+         
+         // (Problem 3)
+         // Unlock it immediately after!
+-        ???(&lock);
++        pthread_mutex_unlock(&lock);
+     }
+     return NULL;
+ }

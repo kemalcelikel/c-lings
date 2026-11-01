@@ -1,0 +1,11 @@
+--- 072_ref_counting.c
++++ 072_ref_counting.c
+@@ -41,7 +41,7 @@
+ 
+     if (obj->ref_count == 0) {
+         printf("Freeing %d!\n", obj->value);
+-        free(???);
++        free(obj);
+     }
+ }
+ 

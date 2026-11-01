@@ -1,0 +1,13 @@
+--- 012_continue.c
++++ 012_continue.c
+@@ -15,8 +15,8 @@
+     for (int n = 1; n <= 20; n++) {
+         // Use the modulo operator % to check divisibility.
+         // Fill in the statements that skip this iteration.
+-        if (n % 3 == 0) ???;
+-        if (n % 5 == 0) ???;
++        if (n % 3 == 0) continue;
++        if (n % 5 == 0) continue;
+         
+         printf("%d ", n);
+     }

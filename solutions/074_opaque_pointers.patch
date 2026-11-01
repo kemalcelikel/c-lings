@@ -1,0 +1,18 @@
+--- 074_opaque_pointers.c
++++ 074_opaque_pointers.c
+@@ -31,13 +31,13 @@
+ int shape_area(Shape* s) {
+     // (Problem 1)
+     // Access the hidden data.
+-    return s->dim * ???;
++    return s->dim * s->dim;
+ }
+ 
+ void shape_destroy(Shape* s) {
+     // (Problem 2)
+     // Free the memory.
+-    free(???);
++    free(s);
+ }
+ 
+ // --- User Code ---

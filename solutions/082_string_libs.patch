@@ -1,0 +1,26 @@
+--- 082_string_libs.c
++++ 082_string_libs.c
+@@ -18,12 +18,12 @@
+ 
+     // (Problem 1)
+     // Append src to dest.
+-    ???(dest, src);
++    strcat(dest, src);
+     printf("Concat: %s\n", dest);
+ 
+     // (Problem 2)
+     // Check if dest is now "Hello World".
+-    if (strcmp(dest, "Hello World") == ???) {
++    if (strcmp(dest, "Hello World") == 0) {
+         printf("Match!\n");
+     } else {
+         printf("No match.\n");
+@@ -31,7 +31,7 @@
+ 
+     // (Problem 3)
+     // Print the length.
+-    printf("Length: %zu\n", ???);
++    printf("Length: %zu\n", strlen(dest));
+ 
+     return 0;
+ }

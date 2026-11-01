@@ -1,0 +1,11 @@
+--- 048_interfaces.c
++++ 048_interfaces.c
+@@ -34,7 +34,7 @@
+         printf("Using %s: ", toolbox[i]->name);
+         // (Problem 1)
+         // Call the 'use' function through the pointer.
+-        ???;
++        toolbox[i]->use();
+     }
+ 
+     return 0;

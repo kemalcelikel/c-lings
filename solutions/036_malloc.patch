@@ -1,0 +1,11 @@
+--- 036_malloc.c
++++ 036_malloc.c
+@@ -27,7 +27,7 @@
+ 
+     // (Problem 1)
+     // We are done with the memory. Free it!
+-    free(???);
++    free(p);
+ 
+     return 0;
+ }

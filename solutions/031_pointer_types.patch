@@ -1,0 +1,16 @@
+--- 031_pointer_types.c
++++ 031_pointer_types.c
+@@ -14,11 +14,11 @@
+ 
+     // (Problem 1)
+     // Declare a pointer to 'letter'.
+-    ??? p_letter = &letter;
++    char *p_letter = &letter;
+ 
+     // (Problem 2)
+     // Declare a pointer to 'number'.
+-    ??? p_number = &number;
++    int *p_number = &number;
+ 
+     printf("%c %d\n", *p_letter, *p_number);
+     return 0;

@@ -1,0 +1,11 @@
+--- 001_hello.c
++++ 001_hello.c
+@@ -17,6 +17,8 @@
+ // Please fix the missing include below so the program compiles!
+ //
+ 
++#include <stdio.h>
++
+ int main(void) {
+     printf("Hello world!\n");
+     return 0;

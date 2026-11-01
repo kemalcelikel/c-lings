@@ -1,0 +1,11 @@
+--- 038_realloc.c
++++ 038_realloc.c
+@@ -18,7 +18,7 @@
+     // We want to add more numbers! Resize to hold 4 integers.
+     // (Problem 1)
+     // Use realloc.
+-    int *new_arr = realloc(arr, sizeof(int) * ???);
++    int *new_arr = realloc(arr, sizeof(int) * 4);
+ 
+     if (new_arr == NULL) {
+         free(arr); // realloc didn't free original on failure
